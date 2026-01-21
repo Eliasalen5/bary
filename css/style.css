@@ -217,6 +217,10 @@ main {
     font-weight: 600;
 }
 
+.main-categorias{
+    margin-top: 80px;
+}
+
 .seccionproductos {
     padding: 40px 20px;
     background-color: #ff4800;
