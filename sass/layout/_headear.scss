@@ -1,8 +1,6 @@
 @use "../abstracts/variables" as *;
 
-/* =========================
-   HEADER
-   ========================= */
+
 .encabezado {
     width: 100%;
     padding: $header-padding;
@@ -12,9 +10,7 @@
     align-items: center;
     color: $color-blanco;
 
-    /* =========================
-       MARCA
-       ========================= */
+
     &-marca {
         display: flex;
         align-items: center;
@@ -26,7 +22,7 @@
             transition: transform 0.4s ease;
         }
 
-        /* animación notoria */
+
         .logo:hover img {
             transform: rotate(-5deg) scale(1.08);
         }
@@ -38,9 +34,7 @@
         }
     }
 
-    /* =========================
-       BUSCADOR
-       ========================= */
+
     &-busqueda {
         display: flex;
         align-items: center;
@@ -60,7 +54,6 @@
                 transform 0.3s ease;
         }
 
-        /* animación notoria */
         .buscador-principal:focus {
             transform: scale(1.05);
             box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
@@ -68,9 +61,7 @@
         }
     }
 
-    /* =========================
-       NAVEGACIÓN
-       ========================= */
+
     &-navegacion {
 
         .nav-link {
@@ -83,13 +74,12 @@
                 transform 0.3s ease;
         }
 
-        /* hover fuerte */
+
         .nav-link:hover {
             color: $color-secundario;
             transform: translateY(-4px);
         }
 
-        /* subrayado animado */
         .nav-link::after {
             content: "";
             position: absolute;
@@ -110,9 +100,7 @@
     }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+
 @media (max-width: 500px) {
     .encabezado {
         flex-wrap: wrap;

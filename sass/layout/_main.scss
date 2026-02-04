@@ -1,10 +1,9 @@
 @use "../abstracts/variables" as *;
 
 .principal {
-    margin-top: 100px; // Para separar del header fijo
+    margin-top: 100px;
     font-family: $fuente-base;
 
-    /* Categorías */
     .articulos {
         margin-bottom: 50px;
 
@@ -47,7 +46,7 @@
         }
     }
 
-    /* Menú del día */
+
     .menu-dia {
         margin-bottom: 50px;
 
@@ -120,7 +119,7 @@
     }
 }
 
-/* Responsive Mobile */
+
 @media (max-width: 500px) {
     .principal {
             padding-top: 120px;
