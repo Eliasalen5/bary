@@ -1,0 +1,141 @@
+@use "../abstracts/variables" as *;
+
+/* =========================
+   HEADER
+   ========================= */
+.encabezado {
+    width: 100%;
+    padding: $header-padding;
+    background-color: $color-principal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-blanco;
+
+    /* =========================
+       MARCA
+       ========================= */
+    &-marca {
+        display: flex;
+        align-items: center;
+        gap: $gap;
+
+        .logo img {
+            height: 60px;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        /* animación notoria */
+        .logo:hover img {
+            transform: rotate(-5deg) scale(1.08);
+        }
+
+        .eslogan {
+            font-size: 1rem;
+            font-weight: 600;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    }
+
+    /* =========================
+       BUSCADOR
+       ========================= */
+    &-busqueda {
+        display: flex;
+        align-items: center;
+        gap: $gap;
+
+        .ubicacion {
+            font-size: 12px;
+        }
+
+        .buscador-principal {
+            padding: $input-padding;
+            border-radius: $border-radius;
+            border: none;
+            width: 220px;
+            transition: 
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        /* animación notoria */
+        .buscador-principal:focus {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+            outline: none;
+        }
+    }
+
+    /* =========================
+       NAVEGACIÓN
+       ========================= */
+    &-navegacion {
+
+        .nav-link {
+            color: $color-blanco;
+            font-weight: 600;
+            position: relative;
+            padding: 8px 14px;
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        /* hover fuerte */
+        .nav-link:hover {
+            color: $color-secundario;
+            transform: translateY(-4px);
+        }
+
+        /* subrayado animado */
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background-color: $color-secundario;
+            transition:
+                width 0.3s ease,
+                left 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 500px) {
+    .encabezado {
+        flex-wrap: wrap;
+        gap: 10px;
+
+        &-marca {
+            display: none;
+        }
+
+        &-busqueda {
+            width: 100%;
+
+            .buscador-principal {
+                width: 100%;
+                transform: none;
+            }
+        }
+
+        &-navegacion {
+
+            .nav-link:hover {
+                transform: none;
+            }
+        }
+    }
+}

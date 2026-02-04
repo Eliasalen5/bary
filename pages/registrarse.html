@@ -1,146 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARY</title>
-    <link rel="stylesheet" href="../css/style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-izquierda">
-            <a href="../index.html">
-                <img src="../img/moto-roja.png" alt="motoroja">
+    <header class="encabezado">
+        <!-- Marca -->
+        <div class="encabezado-marca">
+            <a href="../index.html" class="logo">
+                <img src="../img/moto-roja.png" alt="Logo Bary">
             </a>
-
-            <div class="Ubicacion">
-                <span class="Ubicacion1">Enviar a</span>
-                <span class="Ubicacion2">📍 Tu direccion</span>
-            </div>
-
-            <div class="titulos">
-                <h1>Registrarse</h1>
-                <h2>Tu delivery en Baradero</h2>
-            </div>
+            <p class="eslogan">Tu delivery en Baradero</p>
         </div>
-
-        <div class="header-derecha">
-            <input type="text" placeholder="Buscar locales" class="buscadorprincipal">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid px-0">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="categorias.html">Categorias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="producto.html">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="registrarse.html">Registrarse</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="iniciosesion.html">Iniciar sesion</a>
-                            </li>
-                        </ul>
-                    </div>
+    
+        <!-- Búsqueda y ubicación -->
+        <div class="encabezado-busqueda">
+            <div class="ubicacion">
+                <span class="ubicacion-titulo">Enviar a</span>
+                <span class="ubicacion-direccion">📍 Tu dirección</span>
+            </div>
+    
+            <input type="text" class="buscador-principal" placeholder="Buscar locales">
+        </div>
+    
+        <!-- Navegación -->
+        <nav class="encabezado-navegacion navbar navbar-expand-lg">
+            <div class="container-fluid px-0">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                    aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./categorias.html">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./producto.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./registrarse.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./iniciosesion.html">Iniciar sesión</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="main-registro">
-        <form id="registro1">
-            <h3>Registrarse como negocio</h3>
 
-            <label for="nombre1">Nombre</label>
-            <input type="text" id="nombre1" name="nombre1" required>
+    <main class="container my-5 main-registro">
 
-            <label for="apellido1">Apellido</label>
-            <input type="text" id="apellido1" name="apellido1" required>
+        <div class="row justify-content-center g-4">
 
-            <label for="edad1">Edad</label>
-            <input type="number" id="edad1" name="edad1" required>
+            <!-- REGISTRO NEGOCIO -->
+            <section class="col-12 col-lg-6">
+                <div class="card shadow-lg p-4 h-100">
 
-            <label for="email1">Email</label>
-            <input type="email" id="email1" name="email1" required placeholder="@hotmail.com">
+                    <h3 class="text-center mb-4 text-danger">
+                        Registrarse como negocio
+                    </h3>
 
-            <label for="tel1">Cel</label>
-            <input type="tel" id="tel1" name="tel1" required>
+                    <form>
 
-            <label for="nombre_negocio">Nombre del negocio</label>
-            <input type="text" id="nombre_negocio" name="nombre_negocio" required>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control" required>
+                        </div>
 
-            <label for="categoria">Tipo / Categoría</label>
-            <select id="categoria" name="categoria" required>
+                        <div class="mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text" class="form-control" required>
+                        </div>
 
-            <label for="direccion">Dirección completa</label>
-            <input type="text" id="direccion" name="direccion" placeholder="Calle, número, colonia, ciudad" required>
+                        <div class="mb-3">
+                            <label class="form-label">Edad</label>
+                            <input type="number" class="form-control" required>
+                        </div>
 
-            <label for="codigo_postal">Código Postal</label>
-            <input type="text" id="codigo_postal" name="codigo_postal" required>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="@hotmail.com" required>
+                        </div>
 
+                        <div class="mb-3">
+                            <label class="form-label">Celular</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
 
-            <label for="pass1">Contraseña</label>
-            <input type="password" id="pass1" name="pass1" required>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del negocio</label>
+                            <input type="text" class="form-control" required>
+                        </div>
 
-            <input type="submit" class="btn-principal" value="Guardar Registro">
+                        <div class="mb-3">
+                            <label class="form-label">Categoría</label>
+                            <select class="form-select" required>
+                                <option value="">Seleccionar</option>
+                                <option>Restaurante</option>
+                                <option>Panadería</option>
+                                <option>Heladería</option>
+                            </select>
+                        </div>
 
-            
-        </form>
+                        <div class="mb-3">
+                            <label class="form-label">Dirección</label>
+                            <input type="text" class="form-control" required>
+                        </div>
 
-        <form id="registro2">
-                <h3>Registrarse como cliente</h3>
-                    <div class="mb-3">
-                        <label for="nombre_cliente" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre_cliente" placeholder="Juan" required>
-                    </div>
+                        <div class="mb-3">
+                            <label class="form-label">Código Postal</label>
+                            <input type="text" class="form-control" required>
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="apellido_cliente" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="apellido_cliente" placeholder="Pérez" required>
-                    </div>
+                        <div class="mb-4">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" required>
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="edad_cliente" class="form-label">Edad</label>
-                        <input type="number" class="form-control" id="edad_cliente" placeholder="25" required>
-                    </div>
+                        <button type="submit" class="btn btn-danger w-100">
+                            Guardar registro
+                        </button>
 
-                    <div class="mb-3">
-                        <label for="email_cliente" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email_cliente" placeholder="name@example.com" required>
-                    </div>
+                    </form>
+                </div>
+            </section>
 
-                    <div class="mb-3">
-                        <label for="tel_cliente" class="form-label">Teléfono</label>
-                        <input type="tel" class="form-control" id="tel_cliente" placeholder="123-456-7890" required>
-                    </div>
+            <!-- REGISTRO CLIENTE -->
+            <section class="col-12 col-lg-6">
+                <div class="card shadow-lg p-4 h-100">
 
-                    <div class="mb-3">
-                        <label for="direccion_cliente" class="form-label">Dirección completa</label>
-                        <input type="text" class="form-control" id="direccion_cliente" placeholder="Calle, número, ciudad" required>
-                    </div>
+                    <h3 class="text-center mb-4 text-danger">
+                        Registrarse como cliente
+                    </h3>
 
-                    <div class="mb-3">
-                        <label for="pass_cliente" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="pass_cliente" required>
-                    </div>
+                    <form>
 
-                    <button type="submit" class="btn btn-principal w-100">Guardar Registro</button>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control" required>
+                        </div>
 
-                </form>
+                        <div class="mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Edad</label>
+                            <input type="number" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Dirección</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger w-100">
+                            Guardar registro
+                        </button>
+
+                    </form>
+                </div>
+            </section>
+
+        </div>
     </main>
+
 
     <footer class="piedepagina">
         <h3>Mis redes sociales</h3>

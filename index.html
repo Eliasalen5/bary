@@ -1,107 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARY</title>
-    <link rel="stylesheet" href="./css/style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-izquierda">
-            <a href="./index.html">
-                <img src="./img/moto-roja.png" alt="motoroja">
+    <header class="encabezado">
+        <!-- Marca -->
+        <div class="encabezado-marca">
+            <a href="./index.html" class="logo">
+                <img src="./img/moto-roja.png" alt="Logo Bary">
             </a>
-
-            <div class="Ubicacion">
-                <span class="Ubicacion1">Enviar a</span>
-                <span class="Ubicacion2">📍 Tu direccion</span>
+            <p class="eslogan">Tu delivery en Baradero</p>
+        </div>
+    
+        <!-- Búsqueda y ubicación -->
+        <div class="encabezado-busqueda">
+            <div class="ubicacion">
+                <span class="ubicacion-titulo">Enviar a</span>
+                <span class="ubicacion-direccion">📍 Tu dirección</span>
             </div>
-
-            <h2>Tu delivery en Baradero</h2>
+    
+            <input type="text" class="buscador-principal" placeholder="Buscar locales">
         </div>
-
-        <div class="header-derecha">
-            <input type="text" placeholder="Buscar locales" class="buscadorprincipal">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid px-0">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="./index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/categorias.html">Categorias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/producto.html">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/registrarse.html">Registrarse</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./pages/iniciosesion.html">Iniciar sesion</a>
-                            </li>
-                        </ul>
-                    </div>
+    
+        <!-- Navegación -->
+        <nav class="encabezado-navegacion navbar navbar-expand-lg">
+            <div class="container-fluid px-0">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                    aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/categorias.html">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/producto.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/registrarse.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/iniciosesion.html">Iniciar sesión</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <section class="seccion1">
-            <h2 class="titulosecundario">Hola, que vas a pedir hoy?</h2>
-            <div>
-                <div>
-                    <img class="imagenes" src="./img/pizza_casera.jpg" alt="Pizza">
-                    <h3>Restaurantes</h3>
-                </div>
-                <div>
-                    <img class="imagenes" src="./img/pan-casero.jpg" alt="Pan Casero">
-                    <h3>Panaderias</h3>
-                </div>
-                <div>
-                    <img class="imagenes" src="./img/helados.jpg" alt="Helados">
-                    <h3>Heladerias</h3>
-                </div>
+
+    <main class="principal">
+    
+        <!-- Categorías -->
+        <section class="articulos">
+            <h2 class="titulo-seccion">Hola, ¿qué vas a pedir hoy?</h2>
+    
+            <div class="articulos-lista">
+                <article class="articulo">
+                    <img src="./img/pizza_casera.jpg" alt="Restaurantes" class="articulo-imagen">
+                    <h3 class="articulo-titulo">Restaurantes</h3>
+                </article>
+    
+                <article class="articulo">
+                    <img src="./img/pan-casero.jpg" alt="Panaderías" class="articulo-imagen">
+                    <h3 class="articulo-titulo">Panaderías</h3>
+                </article>
+    
+                <article class="articulo">
+                    <img src="./img/helados.jpg" alt="Heladerías" class="articulo-imagen">
+                    <h3 class="articulo-titulo">Heladerías</h3>
+                </article>
             </div>
         </section>
-        <section class="seccion2">
-            <h2 class="tituloseccion">Menu del dia</h2>
-            <div>
-                <div class="menu-principal">
-                    <img class="menudeldia" src="./img/ravioles.jpg" alt="Ravioles con salsa">
-                    <h3>Ravioles</h3>
-                    <p>Porcion de ravioles con salsa</p>
-                    <p>$5000</p>
-                    <a href="">Comprar</a>
-                </div>
-                <div class="menu-principal">
-                    <img class="menudeldia" src="./img/milanesa.jpg" alt="milanesa">
-                    <h3>Milanesas</h3>
-                    <p>Sandwich de milanesa</p>
-                    <p>$7000</p>
-                    <a href="">Comprar</a>
-                </div>
-                <div class="menu-principal">
-                    <img class="menudeldia" src="./img/fideos.jpg" alt="fideos">
-                    <h3>Fideos</h3>
-                    <p>Porcion fideos con salsa</p>
-                    <p>$6000</p>
-                    <a href="">Comprar</a>
-                </div>
+    
+        <!-- Menú del día -->
+        <section class="menu-dia">
+            <h2 class="titulo-seccion">Menú del día</h2>
+    
+            <div class="menu-lista">
+                <article class="producto">
+                    <img src="./img/ravioles.jpg" alt="Ravioles con salsa" class="producto-imagen">
+                    <h3 class="producto-nombre">Ravioles</h3>
+                    <p class="producto-descripcion">Porción de ravioles con salsa</p>
+                    <p class="producto-precio">$5000</p>
+                    <a href="#" class="producto-boton">Comprar</a>
+                </article>
+    
+                <article class="producto">
+                    <img src="./img/milanesa.jpg" alt="Milanesa" class="producto-imagen">
+                    <h3 class="producto-nombre">Milanesas</h3>
+                    <p class="producto-descripcion">Sándwich de milanesa</p>
+                    <p class="producto-precio">$7000</p>
+                    <a href="#" class="producto-boton">Comprar</a>
+                </article>
+    
+                <article class="producto">
+                    <img src="./img/fideos.jpg" alt="Fideos" class="producto-imagen">
+                    <h3 class="producto-nombre">Fideos</h3>
+                    <p class="producto-descripcion">Porción de fideos con salsa</p>
+                    <p class="producto-precio">$6000</p>
+                    <a href="#" class="producto-boton">Comprar</a>
+                </article>
             </div>
         </section>
+    
     </main>
+
     <footer class="piedepagina">
         <h3>Mis redes sociales</h3>
         <ul>

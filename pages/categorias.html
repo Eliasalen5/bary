@@ -1,121 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARY</title>
-    <link rel="stylesheet" href="../css/style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-izquierda">
-            <a href="../index.html">
-                <img src="../img/moto-roja.png" alt="motoroja">
+    <header class="encabezado">
+        <!-- Marca -->
+        <div class="encabezado-marca">
+            <a href="../index.html" class="logo">
+                <img src="../img/moto-roja.png" alt="Logo Bary">
             </a>
-
-            <div class="Ubicacion">
-                <span class="Ubicacion1">Enviar a</span>
-                <span class="Ubicacion2">📍 Tu direccion</span>
-            </div>
-
-            <div class="titulos">
-                <h1>Categorias</h1>
-                <h2>Tu delivery en Baradero</h2>
-            </div>
+            <p class="eslogan">Tu delivery en Baradero</p>
         </div>
-
-        <div class="header-derecha">
-            <input type="text" placeholder="Buscar locales" class="buscadorprincipal">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid px-0">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="categorias.html">Categorias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="producto.html">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="registrarse.html">Registrarse</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="iniciosesion.html">Iniciar sesion</a>
-                            </li>
-                        </ul>
-                    </div>
+    
+        <!-- Búsqueda y ubicación -->
+        <div class="encabezado-busqueda">
+            <div class="ubicacion">
+                <span class="ubicacion-titulo">Enviar a</span>
+                <span class="ubicacion-direccion">📍 Tu dirección</span>
+            </div>
+    
+            <input type="text" class="buscador-principal" placeholder="Buscar locales">
+        </div>
+    
+        <!-- Navegación -->
+        <nav class="encabezado-navegacion navbar navbar-expand-lg">
+            <div class="container-fluid px-0">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                    aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./categorias.html">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./producto.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./registrarse.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./iniciosesion.html">Iniciar sesión</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="main-categorias">
-        <section class="carrusel">
-            <h2 class="tusnegocios"> Tus negocios aqui </h2>
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
-                <div class="carousel-inner">
+<main class="categorias-main">
 
-                    <div class="carousel-item active">
-                        <img src="../img/carnicerias.jpg" class="d-block w-100" alt="Carnicerias">
-                        <div class="carousel-caption">
-                            <h5>Carnicerias</h5>
-                        </div>
+    <section>
+        <h2 class="text-center mb-4">Tus negocios aquí</h2>
+
+        <div id="carouselCategorias" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner rounded">
+
+                <div class="carousel-item active">
+                    <img src="../img/carnicerias.jpg" class="d-block w-100" alt="Carnicerías">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Carnicerías</h5>
                     </div>
-
-                    <div class="carousel-item">
-                        <img src="../img/helado.jpeg" class="d-block w-100" alt="Heladerias">
-                        <div class="carousel-caption">
-                            <h5>Heladerias</h5>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="../img/medialunas.jpg" class="d-block w-100" alt="Panaderias">
-                        <div class="carousel-caption">
-                            <h5>Panaderias</h5>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="../img/supermercado.jpg" class="d-block w-100" alt="Supermercados">
-                        <div class="carousel-caption">
-                            <h5>Supermercados</h5>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="../img/caramelos.jpeg" class="d-block w-100" alt="Kiosco">
-                        <div class="carousel-caption">
-                            <h5>Kioscos</h5>
-                        </div>
-                    </div>
-
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+                <div class="carousel-item">
+                    <img src="../img/helado.jpeg" class="d-block w-100" alt="Heladerías">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Heladerías</h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/medialunas.jpg" class="d-block w-100" alt="Panaderías">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Panaderías</h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/supermercado.jpg" class="d-block w-100" alt="Supermercados">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Supermercados</h5>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/caramelos.jpeg" class="d-block w-100" alt="Kioscos">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Kioscos</h5>
+                    </div>
+                </div>
+
             </div>
-        </section>
-    </main>
+
+            <button class="carousel-control-prev" type="button"
+                data-bs-target="#carouselCategorias" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                data-bs-target="#carouselCategorias" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+
+        </div>
+    </section>
+
+</main>
+
     <footer class="piedepagina">
         <h3>Mis redes sociales</h3>
         <ul>

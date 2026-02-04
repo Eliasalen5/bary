@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+
+.productos-main {
+    /* 📱 Mobile first (header más alto) */
+    padding-top: calc(#{$header-altura} + 90px);
+    padding-bottom: 2rem;
+
+    font-family: $fuente-base;
+    overflow-x: hidden;
+
+    h2 {
+        color: $color-principal;
+        text-align: center;
+    }
+
+    section.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card {
+        border-radius: $border-radius;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        height: 100%;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .btn {
+        margin-top: auto;
+    }
+
+    /* 🖥️ DESKTOP */
+    @media (min-width: 500px) {
+        padding-top: $header-altura;
+
+        .card-img-top {
+            height: 180px;
+        }
+
+        body {
+        padding-top: 0;
+    }
+    }
+}

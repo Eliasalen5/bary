@@ -1,80 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BARY</title>
-    <link rel="stylesheet" href="../css/style.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-    <header class="header">
-        <div class="header-izquierda">
-            <a href="../index.html">
-                <img src="../img/moto-roja.png" alt="motoroja">
+<body>
+    <header class="encabezado">
+        <!-- Marca -->
+        <div class="encabezado-marca">
+            <a href="../index.html" class="logo">
+                <img src="../img/moto-roja.png" alt="Logo Bary">
             </a>
-
-            <div class="Ubicacion">
-                <span class="Ubicacion1">Enviar a</span>
-                <span class="Ubicacion2">📍 Tu direccion</span>
-            </div>
-
-            <div class="titulos">
-                <h1>Ingresa</h1>
-                <h2>Tu delivery en Baradero</h2>
-            </div>
+            <p class="eslogan">Tu delivery en Baradero</p>
         </div>
-
-        <div class="header-derecha">
-            <input type="text" placeholder="Buscar locales" class="buscadorprincipal">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid px-0">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="categorias.html">Categorias</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="producto.html">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="registrarse.html">Registrarse</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="iniciosesion.html">Iniciar sesion</a>
-                            </li>
-                        </ul>
-                    </div>
+    
+        <!-- Búsqueda y ubicación -->
+        <div class="encabezado-busqueda">
+            <div class="ubicacion">
+                <span class="ubicacion-titulo">Enviar a</span>
+                <span class="ubicacion-direccion">📍 Tu dirección</span>
+            </div>
+    
+            <input type="text" class="buscador-principal" placeholder="Buscar locales">
+        </div>
+    
+        <!-- Navegación -->
+        <nav class="encabezado-navegacion navbar navbar-expand-lg">
+            <div class="container-fluid px-0">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                    aria-controls="menuNav" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./categorias.html">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./producto.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./registrarse.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./iniciosesion.html">Iniciar sesión</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="flex-fill">
-        <form>
+    <main class="container d-flex justify-content-center align-items-center flex-fill">
+
+    <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+        <form class="p-4 border rounded shadow-sm bg-white">
+
+            <h2 class="text-center mb-4">Iniciar sesión</h2>
+
             <div class="mb-3">
                 <label for="email_login" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email_login" placeholder="name@example.com" required>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email_login"
+                    placeholder="nombre@email.com"
+                    required>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-4">
                 <label for="pass_login" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="pass_login" required>
+                <input
+                    type="password"
+                    class="form-control"
+                    id="pass_login"
+                    required>
             </div>
 
-            <button type="submit" class="btn btn-principal w-100">Iniciar sesión</button>
+            <button type="submit" class="btn btn-primary w-100">
+                Iniciar sesión
+            </button>
+
         </form>
-    </main>
+    </div>
+
+</main>
+
     <footer class="piedepagina" class="mt-auto bg-dark text-white text-center p-3">
         <h3>Mis redes sociales</h3>
         <ul>

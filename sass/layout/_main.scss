@@ -1,0 +1,149 @@
+@use "../abstracts/variables" as *;
+
+.principal {
+    margin-top: 100px; // Para separar del header fijo
+    font-family: $fuente-base;
+
+    /* Categorías */
+    .articulos {
+        margin-bottom: 50px;
+
+        .titulo-seccion {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: $color-principal;
+        }
+
+        .articulos-lista {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: $gap;
+
+            .articulo {
+                width: 200px;
+                text-align: center;
+
+                .articulo-imagen {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: $border-radius;
+                    transition: transform 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+                .articulo-titulo {
+                    margin-top: 10px;
+                    font-weight: 600;
+                    color: $color-secundario;
+                }
+            }
+        }
+    }
+
+    /* Menú del día */
+    .menu-dia {
+        margin-bottom: 50px;
+
+        .titulo-seccion {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: $color-principal;
+        }
+
+        .menu-lista {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: $gap;
+
+            .producto {
+                width: 220px;
+                background-color: $color-blanco;
+                border-radius: $border-radius;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                text-align: center;
+                padding: 15px;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                .producto-imagen {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: $border-radius;
+                    margin-bottom: 10px;
+                }
+
+                .producto-nombre {
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+
+                .producto-descripcion {
+                    font-size: 0.9rem;
+                    color: #555;
+                    margin-bottom: 5px;
+                }
+
+                .producto-precio {
+                    font-weight: bold;
+                    color: $color-principal;
+                    margin-bottom: 10px;
+                }
+
+                .producto-boton {
+                    display: inline-block;
+                    padding: 8px 15px;
+                    border-radius: $border-radius;
+                    background-color: $color-principal;
+                    color: $color-blanco;
+                    text-decoration: none;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: $color-secundario;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Responsive Mobile */
+@media (max-width: 500px) {
+    .principal {
+            padding-top: 120px;
+            .categorias {
+                .categorias-lista {
+                    flex-direction: column;
+                    align-items: center;
+
+                .categoria {
+                    max-width: 250px;
+                }
+            }
+        }
+
+        .menu-dia {
+            .menu-lista {
+                flex-direction: column;
+                align-items: center;
+
+                .producto {
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}

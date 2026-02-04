@@ -1,0 +1,10 @@
+@use "abstracts/variables" as *;
+@use "base/reset";
+@use "base/tipografia";
+@use "layout/headear";
+@use "layout/main";
+@use "layout/footer";
+@use "components/articulos";
+@use "components/menu";
+@use "pages/categorias";
+@use "pages/productos";
