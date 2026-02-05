@@ -49,7 +49,7 @@
             border-radius: $border-radius;
             border: none;
             width: 220px;
-            transition: 
+            transition:
                 box-shadow 0.3s ease,
                 transform 0.3s ease;
         }
@@ -101,28 +101,66 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 499px) {
     .encabezado {
-        flex-wrap: wrap;
+        flex-direction: column; // todo en columna
+        align-items: center;
         gap: 10px;
 
+        // === LÍNEA 1: logo + ubicación ===
         &-marca {
-            display: none;
-        }
-
-        &-busqueda {
+            display: flex;
+            flex-direction: row; // logo y ubicación en la misma fila
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             width: 100%;
 
-            .buscador-principal {
-                width: 100%;
-                transform: none;
+            .logo img {
+                height: 50px;
             }
         }
 
-        &-navegacion {
+        .ubicacion {
+            font-size: 12px;
+        }
 
-            .nav-link:hover {
-                transform: none;
+        // === LÍNEA 2: buscador + menú hamburguesa ===
+        .encabezado-busqueda {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+
+            .buscador-principal {
+                flex: 1; // ocupa el máximo espacio disponible
+                min-width: 0; // evita overflow
+            }
+
+            // Botón hamburguesa
+            +.encabezado-navegacion {
+                display: flex;
+                align-items: center;
+
+                .navbar-toggler {
+                    display: block; // siempre visible
+                    flex-shrink: 0;
+                }
+
+                .collapse {
+                    display: none; // menú colapsado hasta abrir
+                }
+            }
+        }
+
+        // === Ajuste menú desplegable ===
+        &-navegacion {
+            width: 100%;
+
+            .nav-link {
+                display: block;
+                text-align: center;
             }
         }
     }
