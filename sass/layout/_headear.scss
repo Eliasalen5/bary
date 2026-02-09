@@ -103,14 +103,14 @@
 
 @media (max-width: 499px) {
     .encabezado {
-        flex-direction: column; // todo en columna
+        flex-direction: column; 
         align-items: center;
         gap: 10px;
 
-        // === LÍNEA 1: logo + ubicación ===
+        
         &-marca {
             display: flex;
-            flex-direction: row; // logo y ubicación en la misma fila
+            flex-direction: row; 
             align-items: center;
             justify-content: center;
             gap: 10px;
@@ -125,7 +125,7 @@
             font-size: 12px;
         }
 
-        // === LÍNEA 2: buscador + menú hamburguesa ===
+        
         .encabezado-busqueda {
             display: flex;
             align-items: center;
@@ -134,8 +134,8 @@
             width: 100%;
 
             .buscador-principal {
-                flex: 1; // ocupa el máximo espacio disponible
-                min-width: 0; // evita overflow
+                flex: 1; 
+                min-width: 0; 
             }
 
             // Botón hamburguesa
@@ -144,17 +144,16 @@
                 align-items: center;
 
                 .navbar-toggler {
-                    display: block; // siempre visible
+                    display: block;
                     flex-shrink: 0;
                 }
 
                 .collapse {
-                    display: none; // menú colapsado hasta abrir
+                    display: none;
                 }
             }
         }
 
-        // === Ajuste menú desplegable ===
         &-navegacion {
             width: 100%;
 
