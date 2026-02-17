@@ -1,166 +1,223 @@
 @use "../abstracts/variables" as *;
 
-
 .encabezado {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: $header-altura;
     padding: $header-padding;
     background-color: $color-principal;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $color-blanco;
+    box-shadow: 0 4px 15px rgba($color-negro, 0.1);
+    z-index: 1000;
+    font-family: $fuente-base;
 
+    &__contenedor {
+        max-width: 1200px;
+        height: 100%;
+        margin: 0 auto;
 
-    &-marca {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $gap;
+    }
+
+    /* ===== IZQUIERDA ===== */
+
+    &__izquierda {
         display: flex;
         align-items: center;
         gap: $gap;
-
-        .logo img {
-            height: 60px;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-
-        .logo:hover img {
-            transform: rotate(-5deg) scale(1.08);
-        }
-
-        .eslogan {
-            font-size: 1rem;
-            font-weight: 600;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
     }
 
+    /* ===== MARCA ===== */
 
-    &-busqueda {
+    &__marca {
         display: flex;
         align-items: center;
         gap: $gap;
+    }
 
-        .ubicacion {
-            font-size: 12px;
-        }
+    &__logo img {
+        height: 80px;
+        width: auto;
+    }
 
-        .buscador-principal {
-            padding: $input-padding;
-            border-radius: $border-radius;
-            border: none;
-            width: 220px;
-            transition:
-                box-shadow 0.3s ease,
-                transform 0.3s ease;
-        }
+    &__eslogan {
+        font-size: 0.9rem;
+        color: $color-blanco;
+        font-weight: 500;
+        white-space: nowrap;
+    }
 
-        .buscador-principal:focus {
-            transform: scale(1.05);
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
-            outline: none;
+    /* ===== BUSQUEDA ===== */
+
+    &__busqueda {
+        flex: 1;
+        max-width: 500px;
+
+        display: flex;
+        align-items: center;
+        gap: $gap;
+    }
+
+    &__ubicacion {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.75rem;
+        color: $color-blanco;
+
+        .ubicacion__direccion {
+            font-weight: 600;
         }
     }
 
+    &__input {
+        flex: 1;
+        height: 40px;
+        padding: $input-padding;
+        border-radius: $border-radius;
+        border: none;
+        outline: none;
+        font-size: 0.9rem;
+    }
 
-    &-navegacion {
+    /* ===== NAVEGACION DESKTOP ===== */
 
-        .nav-link {
-            color: $color-blanco;
-            font-weight: 600;
-            position: relative;
-            padding: 8px 14px;
-            transition:
-                color 0.3s ease,
-                transform 0.3s ease;
+    &__nav {
+        display: flex;
+    }
+
+    &__lista {
+        display: flex;
+        align-items: center;
+        gap: $gap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__enlace {
+        color: $color-blanco;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: 0.3s ease;
+
+        &:hover {
+            color: $color-principal-hover;
         }
+    }
 
+    /* ===== HAMBURGUESA ===== */
 
-        .nav-link:hover {
-            color: $color-secundario;
-            transform: translateY(-4px);
-        }
+    &__toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
 
-        .nav-link::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            width: 0;
+        span {
+            width: 24px;
             height: 3px;
-            background-color: $color-secundario;
-            transition:
-                width 0.3s ease,
-                left 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-            left: 0;
+            background: $color-blanco;
+            border-radius: 2px;
+            transition: 0.3s ease;
         }
     }
 }
 
+/* ===== COMPENSACION HEADER FIXED ===== */
 
-@media (max-width: 499px) {
+.principal {
+    padding-top: $header-altura;
+}
+
+.encabezado__checkbox {
+    display: none;
+}
+
+@media (max-width: 992px) {
     .encabezado {
-        flex-direction: column; 
-        align-items: center;
-        gap: 10px;
+        &__eslogan {
+            display: none;
+        }
+    }
+}
 
-        
-        &-marca {
-            display: flex;
-            flex-direction: row; 
-            align-items: center;
-            justify-content: center;
+@media (max-width: 768px) {
+
+    .encabezado {
+        height: 70px;
+        padding: 10px 15px;
+
+        &__contenedor {
             gap: 10px;
+            position: relative;
+        }
+
+        /* Ocultamos menú por defecto */
+        &__nav {
+            position: absolute;
+            top: 70px;
+            left: 0;
             width: 100%;
-
-            .logo img {
-                height: 50px;
-            }
-        }
-
-        .ubicacion {
-            font-size: 12px;
-        }
-
-        
-        .encabezado-busqueda {
-            display: flex;
+            background: $color-principal;
+            display: none;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
+            padding: 20px 0;
+        }
 
-            .buscador-principal {
-                flex: 1; 
-                min-width: 0; 
+        /* Cuando el checkbox está activo */
+        &__checkbox:checked ~ .encabezado__nav {
+            display: flex;
+        }
+
+        &__lista {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Mostramos hamburguesa */
+        &__toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+
+            input {
+                display: none;
             }
 
-            // Botón hamburguesa
-            +.encabezado-navegacion {
-                display: flex;
-                align-items: center;
-
-                .navbar-toggler {
-                    display: block;
-                    flex-shrink: 0;
-                }
-
-                .collapse {
-                    display: none;
-                }
+            span {
+                width: 24px;
+                height: 3px;
+                background: $color-blanco;
+                border-radius: 2px;
             }
         }
 
-        &-navegacion {
-            width: 100%;
-
-            .nav-link {
-                display: block;
-                text-align: center;
-            }
+        &__busqueda {
+            flex: 1;
+            max-width: 100%;
         }
+
+        &__logo img {
+            height: 60px;
+        }
+
+        &__input {
+            height: 35px;
+            font-size: 0.8rem;
+        }
+    }
+
+    .principal {
+        padding-top: 70px;
     }
 }
