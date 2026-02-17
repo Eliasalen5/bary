@@ -1,7 +1,6 @@
 @use "../abstracts/variables" as *;
 
 .principal {
-    margin-top: 100px;
     font-family: $fuente-base;
 
     .articulos {
@@ -67,7 +66,7 @@
                 width: 220px;
                 background-color: $color-blanco;
                 border-radius: $border-radius;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
                 text-align: center;
                 padding: 15px;
                 transition: transform 0.3s;
@@ -121,27 +120,24 @@
 
 
 @media (max-width: 500px) {
-    .principal {
-            padding-top: 120px;
-            .categorias {
-                .categorias-lista {
-                    flex-direction: column;
-                    align-items: center;
+    .categorias {
+        .categorias-lista {
+            flex-direction: column;
+            align-items: center;
 
-                .categoria {
-                    max-width: 250px;
-                }
+            .categoria {
+                max-width: 250px;
             }
         }
+    }
 
-        .menu-dia {
-            .menu-lista {
-                flex-direction: column;
-                align-items: center;
+    .menu-dia {
+        .menu-lista {
+            flex-direction: column;
+            align-items: center;
 
-                .producto {
-                    max-width: 300px;
-                }
+            .producto {
+                max-width: 300px;
             }
         }
     }

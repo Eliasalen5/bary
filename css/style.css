@@ -17,6 +17,10 @@ body {
   padding: 0;
 }
 
+main {
+  padding-top: 90px;
+}
+
 .encabezado {
   position: fixed;
   top: 0;
@@ -126,11 +130,6 @@ body {
   transition: 0.3s ease;
 }
 
-/* ===== COMPENSACION HEADER FIXED ===== */
-.principal {
-  padding-top: 90px;
-}
-
 .encabezado__checkbox {
   display: none;
 }
@@ -201,7 +200,6 @@ body {
   }
 }
 .principal {
-  margin-top: 100px;
   font-family: "Segoe UI", Arial, sans-serif;
 }
 .principal .articulos {
@@ -301,21 +299,18 @@ body {
 }
 
 @media (max-width: 500px) {
-  .principal {
-    padding-top: 120px;
-  }
-  .principal .categorias .categorias-lista {
+  .categorias .categorias-lista {
     flex-direction: column;
     align-items: center;
   }
-  .principal .categorias .categorias-lista .categoria {
+  .categorias .categorias-lista .categoria {
     max-width: 250px;
   }
-  .principal .menu-dia .menu-lista {
+  .menu-dia .menu-lista {
     flex-direction: column;
     align-items: center;
   }
-  .principal .menu-dia .menu-lista .producto {
+  .menu-dia .menu-lista .producto {
     max-width: 300px;
   }
 }
@@ -496,27 +491,24 @@ body {
 .categorias-main section #carouselCategorias .carousel-control-next {
   filter: invert(1);
 }
-@media (max-width: 500px) {
-  .categorias-main .encabezado {
-    position: sticky;
+@media (max-width: 768px) {
+  .categorias-main main {
+    padding-top: 70px;
   }
-  .categorias-main body {
-    padding-top: 0;
-  }
-  .categorias-main section h2 {
-    font-size: 1.3rem;
-  }
-  .categorias-main #carouselCategorias .carousel-inner {
-    height: 220px;
-  }
-  .categorias-main .carousel-caption {
-    font-size: 0.8rem;
-    display: block !important;
-  }
+}
+.categorias-main section h2 {
+  font-size: 1.3rem;
+}
+.categorias-main #carouselCategorias .carousel-inner {
+  height: 220px;
+}
+.categorias-main .carousel-caption {
+  font-size: 0.8rem;
+  display: block !important;
 }
 
 .productos-main {
-  padding-top: calc(90px + 90px);
+  padding-top: 90px;
   padding-bottom: 2rem;
   font-family: "Segoe UI", Arial, sans-serif;
   overflow-x: hidden;
@@ -548,14 +540,8 @@ body {
   margin-top: auto;
 }
 @media (min-width: 500px) {
-  .productos-main {
-    padding-top: 90px;
-  }
   .productos-main .card-img-top {
     height: 180px;
-  }
-  .productos-main body {
-    padding-top: 0;
   }
 }
 

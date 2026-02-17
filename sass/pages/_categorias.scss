@@ -29,7 +29,7 @@
                     width: 100%;
                     height: 100%;
                     display: block;
-                    object-fit: cover; 
+                    object-fit: cover;
                 }
 
                 .carousel-caption {
@@ -52,30 +52,27 @@
         }
     }
 
-    @media (max-width: 500px) {
-        .encabezado {
-        position: sticky;
+
+    @media (max-width: 768px) {
+        main {
+            padding-top: 70px;
         }
-        
-        body {
-        padding-top: 0;
     }
 
-        section {
-            h2 {
-                font-size: 1.3rem;
-            }
+    section {
+        h2 {
+            font-size: 1.3rem;
         }
+    }
 
-        #carouselCategorias {
-            .carousel-inner {
-                height: 220px; 
-            }
+    #carouselCategorias {
+        .carousel-inner {
+            height: 220px;
         }
+    }
 
-        .carousel-caption {
-            font-size: 0.8rem;
-            display: block !important;
-        }
+    .carousel-caption {
+        font-size: 0.8rem;
+        display: block !important;
     }
 }

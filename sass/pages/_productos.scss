@@ -1,9 +1,8 @@
 @use "../abstracts/variables" as *;
 
 .productos-main {
-    padding-top: calc(#{$header-altura} + 90px);
+    padding-top: $header-altura;
     padding-bottom: 2rem;
-
     font-family: $fuente-base;
     overflow-x: hidden;
 
@@ -39,16 +38,9 @@
         margin-top: auto;
     }
 
-
     @media (min-width: 500px) {
-        padding-top: $header-altura;
-
         .card-img-top {
             height: 180px;
         }
-
-        body {
-        padding-top: 0;
-    }
     }
 }
