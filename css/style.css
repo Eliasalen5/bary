@@ -38,21 +38,17 @@ main {
   height: 100%;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 15px;
 }
-.encabezado {
-  /* ===== IZQUIERDA ===== */
-}
+
 .encabezado__izquierda {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.encabezado {
-  /* ===== MARCA ===== */
-}
+
 .encabezado__marca {
   display: flex;
   align-items: center;
@@ -68,9 +64,7 @@ main {
   font-weight: 500;
   white-space: nowrap;
 }
-.encabezado {
-  /* ===== BUSQUEDA ===== */
-}
+
 .encabezado__busqueda {
   flex: 1;
   max-width: 500px;
@@ -96,9 +90,7 @@ main {
   outline: none;
   font-size: 0.9rem;
 }
-.encabezado {
-  /* ===== NAVEGACION DESKTOP ===== */
-}
+
 .encabezado__nav {
   display: flex;
 }
@@ -120,9 +112,7 @@ main {
 .encabezado__enlace:hover {
   color: #c50000;
 }
-.encabezado {
-  /* ===== HAMBURGUESA ===== */
-}
+
 .encabezado__toggle {
   display: none;
   flex-direction: column;
@@ -158,9 +148,7 @@ main {
     gap: 10px;
     position: relative;
   }
-  .encabezado {
-    /* Ocultamos menú por defecto */
-  }
+
   .encabezado__nav {
     position: absolute;
     top: 70px;
@@ -172,9 +160,7 @@ main {
     align-items: center;
     padding: 20px 0;
   }
-  .encabezado {
-    /* Cuando el checkbox está activo */
-  }
+
   .encabezado__checkbox:checked ~ .encabezado__nav {
     display: flex;
   }
@@ -182,13 +168,11 @@ main {
     flex-direction: column;
     gap: 15px;
   }
-  .encabezado {
-    /* Mostramos hamburguesa */
-  }
+
   .encabezado__toggle {
     display: flex;
-    flex-direction: column;
     gap: 5px;
+    flex-direction: column;
     cursor: pointer;
   }
   .encabezado__toggle input {
@@ -229,9 +213,9 @@ main {
 }
 .principal .articulos .articulos-lista {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 .principal .articulos .articulos-lista .articulo {
   width: 200px;
@@ -264,9 +248,9 @@ main {
 }
 .principal .menu-dia .menu-lista {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 .principal .menu-dia .menu-lista .producto {
   width: 220px;
@@ -385,8 +369,8 @@ main {
 }
 .articulos .articulos-lista {
   display: flex;
-  gap: 1.5rem;
   justify-content: center;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 .articulos .articulos-lista .articulo {
@@ -419,8 +403,8 @@ main {
 }
 .menu-dia .menu-lista {
   display: flex;
-  gap: 1.5rem;
   justify-content: center;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 .menu-dia .menu-lista .producto {
@@ -536,9 +520,9 @@ main {
 }
 .productos-main .productos-lista {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .productos-main .producto {
   background-color: #ffffff;

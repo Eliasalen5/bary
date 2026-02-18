@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .principal {
     font-family: $fuente-base;
@@ -14,10 +15,7 @@
         }
 
         .articulos-lista {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: $gap;
+            @include flex(center, null, $gap, null, wrap);
 
             .articulo {
                 width: 200px;
@@ -57,10 +55,7 @@
         }
 
         .menu-lista {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: $gap;
+            @include flex(center, null, $gap, null, wrap);
 
             .producto {
                 width: 220px;

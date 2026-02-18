@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .categorias-main {
     padding-top: calc(#{$header-altura} + 20px);

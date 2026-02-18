@@ -1,0 +1,29 @@
+@use "../abstracts/variables";
+
+@mixin flex($justify: null,
+    $align: null,
+    $gap-value: null,
+    $direction: null,
+    $wrap: null) {
+    display: flex;
+
+    @if $justify !=null {
+        justify-content: $justify;
+    }
+
+    @if $align !=null {
+        align-items: $align;
+    }
+
+    @if $gap-value !=null {
+        gap: $gap-value;
+    }
+
+    @if $direction !=null {
+        flex-direction: $direction;
+    }
+
+    @if $wrap !=null {
+        flex-wrap: $wrap;
+    }
+}

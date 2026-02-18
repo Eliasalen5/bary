@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .encabezado {
     position: fixed;
@@ -17,26 +18,19 @@
         height: 100%;
         margin: 0 auto;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: $gap;
+        @include flex(space-between, center, $gap);
     }
 
     /* ===== IZQUIERDA ===== */
 
     &__izquierda {
-        display: flex;
-        align-items: center;
-        gap: $gap;
+        @include flex(null, center, $gap);
     }
 
     /* ===== MARCA ===== */
 
     &__marca {
-        display: flex;
-        align-items: center;
-        gap: $gap;
+        @include flex(null, center, $gap);
     }
 
     &__logo img {
@@ -57,14 +51,11 @@
         flex: 1;
         max-width: 500px;
 
-        display: flex;
-        align-items: center;
-        gap: $gap;
+        @include flex(null, center, $gap);
     }
 
     &__ubicacion {
-        display: flex;
-        flex-direction: column;
+        @include flex(null, null, null, column);
         font-size: 0.75rem;
         color: $color-blanco;
 
@@ -86,13 +77,11 @@
     /* ===== NAVEGACION DESKTOP ===== */
 
     &__nav {
-        display: flex;
+        @include flex();
     }
 
     &__lista {
-        display: flex;
-        align-items: center;
-        gap: $gap;
+        @include flex(null, center, $gap);
         list-style: none;
         margin: 0;
         padding: 0;
@@ -179,9 +168,7 @@
 
         /* Mostramos hamburguesa */
         &__toggle {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+            @include flex(null, null, 5px, column);
             cursor: pointer;
 
             input {

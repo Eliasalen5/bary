@@ -1,7 +1,8 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .productos-main {
-    padding-top: $header-altura; // deja espacio para el header fijo
+    padding-top: $header-altura; 
     padding-bottom: 2rem;
     font-family: $fuente-base;
 
@@ -13,10 +14,7 @@
     }
 
     .productos-lista {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        @include flex(center, null, 20px, null, wrap);
     }
 
     .producto {
