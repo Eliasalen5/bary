@@ -21,13 +21,9 @@
         @include flex(space-between, center, $gap);
     }
 
-    /* ===== IZQUIERDA ===== */
-
     &__izquierda {
         @include flex(null, center, $gap);
     }
-
-    /* ===== MARCA ===== */
 
     &__marca {
         @include flex(null, center, $gap);
@@ -44,8 +40,6 @@
         font-weight: 500;
         white-space: nowrap;
     }
-
-    /* ===== BUSQUEDA ===== */
 
     &__busqueda {
         flex: 1;
@@ -74,8 +68,6 @@
         font-size: 0.9rem;
     }
 
-    /* ===== NAVEGACION DESKTOP ===== */
-
     &__nav {
         @include flex();
     }
@@ -98,8 +90,6 @@
             color: $color-principal-hover;
         }
     }
-
-    /* ===== HAMBURGUESA ===== */
 
     &__toggle {
         display: none;
@@ -143,7 +133,6 @@
             position: relative;
         }
 
-        /* Ocultamos menú por defecto */
         &__nav {
             position: absolute;
             top: 70px;
@@ -156,7 +145,6 @@
             padding: 20px 0;
         }
 
-        /* Cuando el checkbox está activo */
         &__checkbox:checked ~ .encabezado__nav {
             display: flex;
         }
@@ -166,7 +154,6 @@
             gap: 15px;
         }
 
-        /* Mostramos hamburguesa */
         &__toggle {
             @include flex(null, null, 5px, column);
             cursor: pointer;

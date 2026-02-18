@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -42,16 +41,10 @@ main {
   align-items: center;
   gap: 15px;
 }
-.encabezado {
-  /* ===== IZQUIERDA ===== */
-}
 .encabezado__izquierda {
   display: flex;
   align-items: center;
   gap: 15px;
-}
-.encabezado {
-  /* ===== MARCA ===== */
 }
 .encabezado__marca {
   display: flex;
@@ -67,9 +60,6 @@ main {
   color: #ffffff;
   font-weight: 500;
   white-space: nowrap;
-}
-.encabezado {
-  /* ===== BUSQUEDA ===== */
 }
 .encabezado__busqueda {
   flex: 1;
@@ -96,9 +86,6 @@ main {
   outline: none;
   font-size: 0.9rem;
 }
-.encabezado {
-  /* ===== NAVEGACION DESKTOP ===== */
-}
 .encabezado__nav {
   display: flex;
 }
@@ -119,9 +106,6 @@ main {
 }
 .encabezado__enlace:hover {
   color: #c50000;
-}
-.encabezado {
-  /* ===== HAMBURGUESA ===== */
 }
 .encabezado__toggle {
   display: none;
@@ -158,9 +142,6 @@ main {
     gap: 10px;
     position: relative;
   }
-  .encabezado {
-    /* Ocultamos menú por defecto */
-  }
   .encabezado__nav {
     position: absolute;
     top: 70px;
@@ -172,18 +153,12 @@ main {
     align-items: center;
     padding: 20px 0;
   }
-  .encabezado {
-    /* Cuando el checkbox está activo */
-  }
   .encabezado__checkbox:checked ~ .encabezado__nav {
     display: flex;
   }
   .encabezado__lista {
     flex-direction: column;
     gap: 15px;
-  }
-  .encabezado {
-    /* Mostramos hamburguesa */
   }
   .encabezado__toggle {
     display: flex;
@@ -596,7 +571,6 @@ main {
   background-color: #ff4800;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .productos-main {
     padding-top: 100px;
