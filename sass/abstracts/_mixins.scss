@@ -1,4 +1,4 @@
-@use "../abstracts/variables";
+@use "../abstracts/variables" as *;
 
 @mixin flex($justify: null,
     $align: null,
@@ -7,23 +7,31 @@
     $wrap: null) {
     display: flex;
 
-    @if $justify !=null {
+    @if $justify != null {
         justify-content: $justify;
     }
 
-    @if $align !=null {
+    @if $align != null {
         align-items: $align;
     }
 
-    @if $gap-value !=null {
+    @if $gap-value != null {
         gap: $gap-value;
     }
 
-    @if $direction !=null {
+    @if $direction != null {
         flex-direction: $direction;
     }
 
-    @if $wrap !=null {
+    @if $wrap != null {
         flex-wrap: $wrap;
     }
+}
+
+@mixin card($bg: $color-blanco,
+    $radius: $border-radius,
+    $shadow: 0 2px 8px rgba($color-negro, 0.1)) {
+    background-color: $bg;
+    border-radius: $radius;
+    box-shadow: $shadow;
 }

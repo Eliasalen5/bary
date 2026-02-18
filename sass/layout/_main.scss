@@ -59,9 +59,7 @@
 
             .producto {
                 width: 220px;
-                background-color: $color-blanco;
-                border-radius: $border-radius;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                @include card();
                 text-align: center;
                 padding: 15px;
                 transition: transform 0.3s;
