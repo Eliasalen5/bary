@@ -1,17 +1,22 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 html,
 body {
     width: 100%;
     overflow-x: hidden;
+    height: 100%;
 }
 
 body {
     font-family: $fuente-base;
     margin: 0;
     padding: 0;
+    padding-top: $header-altura;
+    min-height: 100vh;
+    @include flex(null, null, null, column);
 }
 
 main {
-    padding-top: $header-altura;
+    flex: 1;
 }

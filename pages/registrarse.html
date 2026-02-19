@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrarse | Bary - Lo que busques lo encontrás</title>
+    <title>Registrarse en Bary | Crear cuenta como negocio, cliente o cadete</title>
 
     <link rel="canonical" href="https://barycompleto.vercel.app/">
 
@@ -16,14 +16,17 @@
     <meta name="keywords" content="productos, ofertas, tienda online, Bary, compras, descuentos">
     <meta name="robots" content="index, follow">
 
-    <meta name="description" content="Crea tu cuenta en Bary para acceder a todos nuestros productos, ofertas y novedades de forma rápida y segura.">
+    <meta name="description"
+        content="Crea tu cuenta en Bary para acceder a todos nuestros productos, ofertas y novedades de forma rápida y segura.">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Bary">
     <meta property="og:title" content="Registrarse | Bary">
-    <meta property="og:description" content="Crea tu cuenta en Bary para acceder a todos nuestros productos, ofertas y novedades de forma rápida y segura.">
+    <meta property="og:description"
+        content="Crea tu cuenta en Bary para acceder a todos nuestros productos, ofertas y novedades de forma rápida y segura.">
     <meta property="og:url" content="https://barycompleto.vercel.app/">
     <meta property="og:image" content="https://barycompleto.vercel.app/img/opgraph.png">
+    <meta property="og:image:alt" content="Bary - Plataforma de delivery en Baradero">
     <meta property="og:locale" content="es_AR">
 </head>
 
@@ -71,8 +74,8 @@
                             class="encabezado__enlace">Categorías</a></li>
                     <li class="encabezado__item"><a href="../pages/producto.html"
                             class="encabezado__enlace">Productos</a></li>
-                    <li class="encabezado__item"><a href="./registrarse.html"
-                            class="encabezado__enlace">Registrarse</a></li>
+                    <li class="encabezado__item"><a href="./registrarse.html" class="encabezado__enlace">Registrarse</a>
+                    </li>
                     <li class="encabezado__item"><a href="../pages/iniciosesion.html" class="encabezado__enlace">Iniciar
                             sesión</a></li>
                 </ul>
@@ -84,150 +87,242 @@
 
 
 
-    <main class="container my-5 main-registro">
+    <main class="registro">
 
-        <h1 class="titulo-seccion">REGISTRARSE</h1>
+        <h1 class="registro__titulo">Descubrí Bary</h1>
 
-        <div class="row justify-content-center g-4">
+        <p class="registro__descripcion">
+            Elegí cómo querés formar parte y completá el formulario correspondiente.
+        </p>
 
+        <div class="registro__grid">
 
-            <section class="col-12 col-lg-6">
-                <div class="card shadow-lg p-4 h-100">
+            <section class="registro__card">
+                <h2 class="registro__card-titulo">Registra tu negocio</h2>
 
-                    <h3 class="text-center mb-4 text-danger">
-                        Registrarse como negocio
-                    </h3>
+                <form class="formulario">
 
-                    <form>
+                    <div class="formulario__grupo">
+                        <label for="negocio-nombre">Nombre del dueño</label>
+                        <input type="text" id="negocio-nombre" name="nombre" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Nombre</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="negocio-apellido">Apellido</label>
+                        <input type="text" id="negocio-apellido" name="apellido" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Apellido</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="negocio-edad">Edad</label>
+                        <input type="number" id="negocio-edad" name="edad" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Edad</label>
-                            <input type="number" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="negocio-email">Email</label>
+                        <input type="email" id="negocio-email" name="email" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="@hotmail.com" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="negocio-celular">Celular</label>
+                        <input type="tel" id="negocio-celular" name="celular" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Celular</label>
-                            <input type="tel" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="negocio-nombre-local">Nombre del negocio</label>
+                        <input type="text" id="negocio-nombre-local" name="nombre_negocio" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Nombre del negocio</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="negocio-categoria">Categoría</label>
+                        <select id="negocio-categoria" name="categoria" required>
+                            <option value="">Seleccionar</option>
+                            <option>Restaurante</option>
+                            <option>Panadería</option>
+                            <option>Heladería</option>
+                        </select>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Categoría</label>
-                            <select class="form-select" required>
-                                <option value="">Seleccionar</option>
-                                <option>Restaurante</option>
-                                <option>Panadería</option>
-                                <option>Heladería</option>
-                            </select>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="negocio-direccion">Dirección</label>
+                        <input type="text" id="negocio-direccion" name="direccion" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Dirección</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="negocio-cp">Código Postal</label>
+                        <input type="text" id="negocio-cp" name="codigo_postal" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Código Postal</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="negocio-password">Contraseña</label>
+                        <input type="password" id="negocio-password" name="password" required>
+                    </div>
 
-                        <div class="mb-4">
-                            <label class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" required>
-                        </div>
+                    <button type="submit" class="formulario__boton">
+                        Crear cuenta
+                    </button>
 
-                        <button type="submit" class="btn btn-danger w-100">
-                            Guardar registro
-                        </button>
-
-                    </form>
-                </div>
+                </form>
             </section>
 
+            <section class="registro__card">
+                <h2 class="registro__card-titulo">Registrarse como cliente</h2>
 
-            <section class="col-12 col-lg-6">
-                <div class="card shadow-lg p-4 h-100">
+                <form class="formulario">
 
-                    <h3 class="text-center mb-4 text-danger">
-                        Registrarse como cliente
-                    </h3>
+                    <div class="formulario__grupo">
+                        <label for="cliente-nombre">Nombre</label>
+                        <input type="text" id="cliente-nombre" name="nombre" required>
+                    </div>
 
-                    <form>
+                    <div class="formulario__grupo">
+                        <label for="cliente-apellido">Apellido</label>
+                        <input type="text" id="cliente-apellido" name="apellido" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Nombre</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="cliente-edad">Edad</label>
+                        <input type="number" id="cliente-edad" name="edad" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Apellido</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="cliente-email">Email</label>
+                        <input type="email" id="cliente-email" name="email" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Edad</label>
-                            <input type="number" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="cliente-telefono">Teléfono</label>
+                        <input type="tel" id="cliente-telefono" name="telefono" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="cliente-direccion">Dirección</label>
+                        <input type="text" id="cliente-direccion" name="direccion" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" required>
-                        </div>
+                    <div class="formulario__grupo">
+                        <label for="cliente-password">Contraseña</label>
+                        <input type="password" id="cliente-password" name="password" required>
+                    </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Dirección</label>
-                            <input type="text" class="form-control" required>
-                        </div>
+                    <button type="submit" class="formulario__boton">
+                        Crear cuenta
+                    </button>
 
-                        <div class="mb-4">
-                            <label class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" required>
-                        </div>
+                </form>
+            </section>
 
-                        <button type="submit" class="btn btn-danger w-100">
-                            Guardar registro
-                        </button>
+            <section class="registro__card">
+                <h2 class="registro__card-titulo">Registrarse como cadete</h2>
 
-                    </form>
-                </div>
+                <form class="formulario">
+
+                    <div class="formulario__grupo">
+                        <label for="cadete-nombre">Nombre</label>
+                        <input type="text" id="cadete-nombre" name="nombre" required>
+                    </div>
+
+                    <div class="formulario__grupo">
+                        <label for="cadete-apellido">Apellido</label>
+                        <input type="text" id="cadete-apellido" name="apellido" required>
+                    </div>
+
+                    <div class="formulario__grupo">
+                        <label for="cadete-edad">Edad</label>
+                        <input type="number" id="cadete-edad" name="edad" min="18" required>
+                    </div>
+
+                    <div class="formulario__grupo">
+                        <label for="cadete-email">Email</label>
+                        <input type="email" id="cadete-email" name="email" required>
+                    </div>
+
+                    <div class="formulario__grupo">
+                        <label for="cadete-telefono">Teléfono</label>
+                        <input type="tel" id="cadete-telefono" name="telefono" required>
+                    </div>
+
+                    <div class="formulario__grupo">
+                        <label for="cadete-vehiculo">Tipo de vehículo</label>
+                        <select id="cadete-vehiculo" name="vehiculo" required>
+                            <option value="">Seleccionar</option>
+                            <option>Moto</option>
+                            <option>Bicicleta</option>
+                            <option>Auto</option>
+                        </select>
+                    </div>
+
+                    <div class="formulario__grupo">
+                        <label for="cadete-password">Contraseña</label>
+                        <input type="password" id="cadete-password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="formulario__boton">
+                        Crear cuenta
+                    </button>
+
+                </form>
             </section>
 
         </div>
+
     </main>
 
 
-    <footer class="piedepagina">
-        <h3>Mis redes sociales</h3>
-        <ul>
-            <li><a href="../img/whatssap.png"><img src="../img/whatssap.png" alt="Whatssap"></a></li>
-            <li><a href="../img/facebook.png"><img src="../img/facebook.png" alt="Facebook"></a></li>
-            <li><a href="../img/instagram.png"><img src="../img/instagram.png" alt="Instagram"></a></li>
-            <li><a href="../img/tiktok.png"><img src="../img/tiktok.png" alt="TikTok"></a></li>
-        </ul>
+
+    <footer class="footer">
+
+        <div class="footer__container">
+
+            <!-- Marca -->
+            <div class="footer__brand">
+                <img src="../img/moto-roja.png" alt="Logo Bary" class="footer__logo">
+                <p class="footer__description">
+                    Bary – Tu delivery en Baradero.
+                    Lo que busques, lo encontrás.
+                </p>
+            </div>
+
+            <!-- Información -->
+            <div class="footer__section">
+                <h4 class="footer__title">Información</h4>
+                <ul class="footer__list">
+                    <li>📍 Baradero, Buenos Aires</li>
+                    <li>🕒 Lun a Dom 9:00 - 23:00</li>
+                    <li>🚚 Envíos rápidos en tu zona</li>
+                    <li>💳 Aceptamos efectivo y transferencias</li>
+                </ul>
+            </div>
+
+            <!-- Atención al cliente -->
+            <div class="footer__section">
+                <h4 class="footer__title">Atención al cliente</h4>
+                <ul class="footer__list">
+                    <li>📞 +54 9 3329 000000</li>
+                    <li>💬 WhatsApp</li>
+                    <li>📧 contacto@bary.com</li>
+                </ul>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="footer__section">
+                <h4 class="footer__title">Seguinos</h4>
+                <ul class="footer__social">
+                    <li><a href="#" class="footer__social-link">Instagram</a></li>
+                    <li><a href="#" class="footer__social-link">Facebook</a></li>
+                    <li><a href="#" class="footer__social-link">TikTok</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <p>© 2026 Bary. Todos los derechos reservados.</p>
+            <div class="footer__legal">
+                <a href="#" class="footer__legal-link">Términos y condiciones</a>
+                <a href="#" class="footer__legal-link">Política de privacidad</a>
+            </div>
+        </div>
+
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

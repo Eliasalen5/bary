@@ -2,7 +2,6 @@
 @use "../abstracts/mixins" as *;
 
 .categorias-main {
-    padding-top: calc(#{$header-altura} + 20px);
     padding-bottom: 2rem;
 
     section {

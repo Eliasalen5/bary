@@ -2,7 +2,6 @@
 @use "../abstracts/mixins" as *;
 
 .productos-main {
-    padding-top: $header-altura; 
     padding-bottom: 2rem;
     font-family: $fuente-base;
 
@@ -84,7 +83,6 @@
 
 @media (max-width: 768px) {
     .productos-main {
-        padding-top: calc($header-altura + 10px);
 
         .productos-lista {
             gap: 15px;
