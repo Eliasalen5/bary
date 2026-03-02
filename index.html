@@ -4,29 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bary | Tu delivery - Lo que busques lo encontrás</title>
+    <script defer src="./js/main.js"></script>
+    <title>Bary | Pedí comida online en Baradero - Delivery rápido</title>
 
     <link rel="canonical" href="https://barycompleto.vercel.app/">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
     <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="icon" href="./img/moto-roja.png" type="image/png">
 
     <meta name="author" content="Elias Alen Obregon">
 
     <meta name="description"
-        content="Descubrí los mejores productos en Bary. Ofertas, calidad y variedad en un solo lugar. Encontrá lo que necesitás de forma rápida y segura.">
-
-    <meta name="keywords" content="productos, ofertas, tienda online, Bary, compras, descuentos">
+        content="Pedí comida online en Baradero con Bary. Restaurantes, panaderías y heladerías en un solo lugar. Rápido y fácil.">
+    <meta name="keywords"
+        content="delivery Baradero, pedir comida online, restaurantes en Baradero, panaderías Baradero, heladerías Baradero, app de delivery local">
 
     <meta name="robots" content="index, follow">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Bary">
-    <meta property="og:title" content="Productos | Bary - Lo que busques lo encontrás">
-    <meta property="og:description"
-        content="Descubrí los mejores productos en Bary. Ofertas, calidad y variedad en un solo lugar. Encontrá lo que necesitás de forma rápida y segura.">
+    <meta property="og:title" content="Bary | Pedí comida online en Baradero - Delivery rápido">
+    <meta property="og:description" content="Pedí comida online en Baradero con Bary. Rápido y fácil.">
     <meta property="og:url" content="https://barycompleto.vercel.app/">
     <meta property="og:image" content="https://barycompleto.vercel.app/img/opgraph.png">
     <meta property="og:locale" content="es_AR">
@@ -51,7 +50,7 @@
 
                 <div class="encabezado__marca">
                     <a href="./index.html" class="encabezado__logo">
-                        <img src="./img/moto-roja.png" alt="Logo Bary" title="Logo de Bary">
+                        <img src="./img/moto-roja.png" alt="Bary - Inicio" width="120" height="120">
                     </a>
                     <p class="encabezado__eslogan">
                         Tu delivery en Baradero
@@ -68,91 +67,474 @@
                     </span>
                 </div>
 
-                <input type="text" class="encabezado__input" placeholder="Buscar locales">
+                <label for="busqueda" class="visually-hidden">Buscar locales</label>
+                <input type="text" id="busqueda" class="encabezado__input" placeholder="Buscar locales">
             </div>
 
             <nav class="encabezado__nav" aria-label="Navegación principal">
                 <ul class="encabezado__lista">
-                    <li class="encabezado__item"><a href="./index.html" title="Inicio Bary" class="encabezado__enlace">Inicio</a></li>
+                    <li class="encabezado__item"><a href="./index.html" title="Inicio Bary"
+                            class="encabezado__enlace">Inicio</a></li>
                     <li class="encabezado__item"><a href="./pages/categorias.html" title="Categorías de productos"
                             class="encabezado__enlace">Categorías</a></li>
-                    <li class="encabezado__item"><a href="./pages/producto.html"  title="Productos"
-                            class="encabezado__enlace">Productos</a></li>
+                    <li class="encabezado__item"><a href="./pages/locales.html" title="Locales"
+                            class="encabezado__enlace">Locales</a></li>
                     <li class="encabezado__item"><a href="./pages/registrarse.html" title="Registrarse en Bary"
                             class="encabezado__enlace">Registrarse</a></li>
-                    <li class="encabezado__item"><a href="./pages/iniciosesion.html" title="Iniciar sesión" class="encabezado__enlace">Iniciar
+                    <li class="encabezado__item"><a href="./pages/iniciosesion.html" title="Iniciar sesión"
+                            class="encabezado__enlace">Iniciar
                             sesión</a></li>
+                    <li class="encabezado__item"><a href="./pages/carrito.html" class="encabezado__enlace">Carrito
+                            🛒</a></li>
                 </ul>
             </nav>
+
+            <label for="menu-toggle" class="encabezado__overlay"></label>
 
         </div>
 
     </header>
 
 
-    <main class="principal">
+    <main class="home">
 
+        <!-- HERO PRINCIPAL -->
+        <section class="hero">
 
-        <section class="articulos">
-            <h1 class="titulo-seccion">Hola, ¿qué vas a pedir hoy?</h1>
+            <div class="hero__contenido">
 
-            <div class="articulos-lista">
-                <article class="articulo">
-                    <img src="./img/pizza_casera.jpg" alt="Restaurantes" title="Restaurantes en Bary" class="articulo-imagen">
-                    <h3 class="articulo-titulo">Restaurantes</h3>
-                </article>
+                <h1 class="hero__titulo">
+                    Pedí lo que quieras en minutos en Baradero
+                </h1>
 
-                <article class="articulo">
-                    <img src="./img/pan-casero.jpg" alt="Panaderías" title="Panaderías en Bary" class="articulo-imagen">
-                    <h3 class="articulo-titulo">Panaderías</h3>
-                </article>
+                <p class="hero__descripcion">
+                    Restaurantes, panaderías y heladerías en un solo lugar.
+                    Rápido, simple y local.
+                </p>
 
-                <article class="articulo">
-                    <img src="./img/helados.jpg" alt="Heladerías" title="Heladerías en Bary" class="articulo-imagen">
-                    <h3 class="articulo-titulo">Heladerías</h3>
-                </article>
+                <div class="hero__acciones">
+                    <a href="./pages/locales.html" class="btn btn--primario">
+                        Ver locales disponibles
+                    </a>
+
+                    <a href="./pages/categorias.html" class="btn btn--secundario">
+                        Explorar categorías
+                    </a>
+                </div>
+
             </div>
+
         </section>
 
 
+
+        <!-- CATEGORÍAS -->
+        <section class="categorias">
+
+            <h2 class="titulo-seccion">
+                Categorías populares
+            </h2>
+
+            <div class="articulos-lista">
+
+                <a href="./pages/locales.html?categoria=restaurantes" class="articulo">
+                    <img src="./img/pizza_casera.jpg" alt="Locales de restaurantes en Baradero" class="articulo-imagen"
+                        width="800" height="800" loading="lazy">
+                    <h3 class="articulo-titulo">Restaurantes</h3>
+                </a>
+
+                <a href="./pages/locales.html?categoria=panaderias" class="articulo">
+                    <img src="./img/pan-casero.jpg" alt="Panaderías en Baradero" class="articulo-imagen" width="800"
+                        height="800" loading="lazy">
+                    <h3 class="articulo-titulo">Panaderías</h3>
+                </a>
+
+                <a href="./pages/locales.html?categoria=heladerias" class="articulo">
+                    <img src="./img/helados.jpg" alt="Heladerías en Baradero" class="articulo-imagen" width="800"
+                        height="800" loading="lazy">
+                    <h3 class="articulo-titulo">Heladerías</h3>
+                </a>
+
+            </div>
+
+        </section>
+        <!-- LOCALES DESTACADOS -->
+        <section class="destacados">
+
+            <h2 class="titulo-seccion">Locales destacados</h2>
+
+            <div class="destacados__grid">
+
+                <!-- LOCAL 1 -->
+                <article class="local-card local-card--premium">
+                    <a href="./pages/local.html?id=1" class="local-card__link">
+
+                        <div class="local-card__badge">
+                            Destacado
+                        </div>
+
+                        <img src="./img/pizza_casera.jpg" alt="Pizzería Don Carlos en Baradero"
+                            class="local-card__imagen" width="800" height="800" loading="lazy">
+
+                        <div class="local-card__contenido">
+
+                            <h3 class="local-card__nombre">
+                                Pizzería Don Carlos
+                            </h3>
+
+                            <div class="local-card__rating">
+                                <span class="rating__estrellas">⭐⭐⭐⭐⭐</span>
+                                <span class="rating__numero">4.8</span>
+                                <span class="rating__reviews">(126 reseñas)</span>
+                            </div>
+
+                            <p class="local-card__categoria">
+                                Restaurante
+                            </p>
+
+                            <p class="local-card__pedidos">
+                                🔥 +142 pedidos este mes
+                            </p>
+
+                            <div class="local-card__info">
+                                <span>⏱ 30-40 min</span>
+                                <span class="local-card__envio">
+                                    🚚 Envío gratis
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- LOCAL 2 -->
+                <article class="local-card">
+                    <a href="./pages/local.html?id=2" class="local-card__link">
+
+                        <img src="./img/pan-casero.jpg" alt="Panadería La Espiga en Baradero" class="local-card__imagen"
+                            width="800" height="800" loading="lazy">
+
+                        <div class="local-card__contenido">
+
+                            <h3 class="local-card__nombre">
+                                Panadería La Espiga
+                            </h3>
+
+                            <div class="local-card__rating">
+                                <span class="rating__estrellas">⭐⭐⭐⭐</span>
+                                <span class="rating__numero">4.5</span>
+                                <span class="rating__reviews">(58 reseñas)</span>
+                            </div>
+
+                            <p class="local-card__categoria">
+                                Panadería
+                            </p>
+
+                            <p class="local-card__pedidos">
+                                🔥 +63 pedidos este mes
+                            </p>
+
+                            <div class="local-card__info">
+                                <span>⏱ 20-30 min</span>
+                                <span>🚚 $800 envío</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </article>
+
+                <!-- LOCAL 3 -->
+                <article class="local-card">
+                    <a href="./pages/local.html?id=3" class="local-card__link">
+
+                        <img src="./img/helados.jpg" alt="Heladería Frío Sur en Baradero" class="local-card__imagen"
+                            width="800" height="800" loading="lazy">
+
+                        <div class="local-card__contenido">
+
+                            <h3 class="local-card__nombre">
+                                Heladería Frío Sur
+                            </h3>
+
+                            <div class="local-card__rating">
+                                <span class="rating__estrellas">⭐⭐⭐⭐⭐</span>
+                                <span class="rating__numero">4.9</span>
+                                <span class="rating__reviews">(89 reseñas)</span>
+                            </div>
+
+                            <p class="local-card__categoria">
+                                Heladería
+                            </p>
+
+                            <p class="local-card__pedidos">
+                                🔥 +97 pedidos este mes
+                            </p>
+
+                            <div class="local-card__info">
+                                <span>⏱ 15-25 min</span>
+                                <span>🚚 Envío gratis</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+        <!-- OFERTAS -->
+        <section class="ofertas">
+
+            <div class="ofertas__header">
+                <h2 class="titulo-seccion">🔥 Ofertas de la semana</h2>
+                <p class="ofertas__subtitulo">
+                    Aprovechá estas promos por tiempo limitado
+                </p>
+            </div>
+
+            <div class="ofertas__grid">
+
+                <!-- OFERTA 1 -->
+                <article class="oferta-card">
+
+                    <div class="oferta-card__descuento">
+                        -20%
+                    </div>
+
+                    <img src="./img/milanesa.jpg" alt="Promo sándwich de milanesa en Baradero"
+                        class="oferta-card__imagen" width="800" height="800" loading="lazy">
+
+                    <div class="oferta-card__contenido">
+
+                        <h3 class="oferta-card__nombre">
+                            Sándwich de Milanesa
+                        </h3>
+
+                        <p class="oferta-card__local">
+                            Pizzería Don Carlos
+                        </p>
+
+                        <div class="oferta-card__precios">
+                            <span class="precio-anterior">$7000</span>
+                            <span class="precio-actual">$5600</span>
+                        </div>
+
+                        <a href="./pages/local.html?id=1" class="oferta-card__boton">
+                            Aprovechar oferta
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- OFERTA 2 -->
+                <article class="oferta-card">
+
+                    <div class="oferta-card__descuento">
+                        -15%
+                    </div>
+
+                    <img src="./img/ravioles.jpg" alt="Promo ravioles en restaurante de Baradero"
+                        class="oferta-card__imagen" width="800" height="800" loading="lazy">
+
+                    <div class="oferta-card__contenido">
+
+                        <h3 class="oferta-card__nombre">
+                            Ravioles con salsa
+                        </h3>
+
+                        <p class="oferta-card__local">
+                            Restaurante El Centro
+                        </p>
+
+                        <div class="oferta-card__precios">
+                            <span class="precio-anterior">$5000</span>
+                            <span class="precio-actual">$4250</span>
+                        </div>
+
+                        <a href="./pages/local.html?id=2" class="oferta-card__boton">
+                            Aprovechar oferta
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- OFERTA 3 -->
+                <article class="oferta-card">
+
+                    <div class="oferta-card__descuento">
+                        2x1
+                    </div>
+
+                    <img src="./img/helados.jpg" alt="Promo 2x1 en heladería en Baradero" class="oferta-card__imagen"
+                        width="800" height="800" loading="lazy">
+
+                    <div class="oferta-card__contenido">
+
+                        <h3 class="oferta-card__nombre">
+                            2x1 en cucuruchos
+                        </h3>
+
+                        <p class="oferta-card__local">
+                            Heladería Frío Sur
+                        </p>
+
+                        <div class="oferta-card__precios">
+                            <span class="precio-actual">Promo especial</span>
+                        </div>
+
+                        <a href="./pages/local.html?id=3" class="oferta-card__boton">
+                            Aprovechar oferta
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MENÚ DEL DÍA -->
         <section class="menu-dia">
-            <h2 class="titulo-seccion">Menú del día</h2>
+
+            <h2 class="titulo-seccion">🔥 Menú del día</h2>
 
             <div class="menu-lista">
+
                 <article class="producto">
-                    <img src="./img/ravioles.jpg" alt="Ravioles con salsa" title="Ravioles con salsa" class="producto-imagen">
-                    <h3 class="producto-nombre">Ravioles</h3>
+                    <a href="./pages/locales.html?categoria=restaurantes" class="producto__link">
+                        <img src="./img/ravioles.jpg" alt="Ravioles con salsa en restaurante de Baradero"
+                            class="producto-imagen" width="800" height="800" loading="lazy">
+
+                        <h3 class="producto-nombre">Ravioles</h3>
+                    </a>
+
                     <p class="producto-descripcion">Porción de ravioles con salsa</p>
                     <p class="producto-precio">$5000</p>
-                    <a href="#" class="producto-boton">Comprar</a>
+
+                    <button type="button" class="producto-boton">
+                        Agregar al carrito
+                    </button>
                 </article>
 
+
                 <article class="producto">
-                    <img src="./img/milanesa.jpg" alt="Milanesa" title="Milanesa deliciosa" class="producto-imagen">
-                    <h3 class="producto-nombre">Milanesas</h3>
+                    <a href="./pages/locales.html?categoria=restaurantes" class="producto__link">
+                        <img src="./img/milanesa.jpg" alt="Sándwich de milanesa en Baradero" class="producto-imagen"
+                            width="800" height="800" loading="lazy">
+
+                        <h3 class="producto-nombre">Milanesas</h3>
+                    </a>
+
                     <p class="producto-descripcion">Sándwich de milanesa</p>
                     <p class="producto-precio">$7000</p>
-                    <a href="#" class="producto-boton">Comprar</a>
+
+                    <button type="button" class="producto-boton">
+                        Agregar al carrito
+                    </button>
                 </article>
 
+
                 <article class="producto">
-                    <img src="./img/fideos.jpg" alt="Fideos" title="Fideos caseros" class="producto-imagen">
-                    <h3 class="producto-nombre">Fideos</h3>
+                    <a href="./pages/locales.html?categoria=restaurantes" class="producto__link">
+                        <img src="./img/fideos.jpg" alt="Fideos con salsa en restaurante de Baradero"
+                            class="producto-imagen" width="800" height="800" loading="lazy">
+
+                        <h3 class="producto-nombre">Fideos</h3>
+                    </a>
+
                     <p class="producto-descripcion">Porción de fideos con salsa</p>
                     <p class="producto-precio">$6000</p>
-                    <a href="#" class="producto-boton">Comprar</a>
+
+                    <button type="button" class="producto-boton">
+                        Agregar al carrito
+                    </button>
                 </article>
+
             </div>
+
+        </section>
+
+        <section class="confianza">
+            <div class="confianza__contenedor">
+
+                <h2 class="confianza__titulo">¿Por qué elegir Bary?</h2>
+
+                <div class="confianza__grid">
+
+                    <article class="confianza__item">
+                        <div class="confianza__icono">🔒</div>
+                        <h3>Pago seguro</h3>
+                        <p>Tus datos están protegidos y las transacciones son seguras.</p>
+                    </article>
+
+                    <article class="confianza__item">
+                        <div class="confianza__icono">✔</div>
+                        <h3>Comercios verificados</h3>
+                        <p>Trabajamos solo con locales reales de Baradero.</p>
+                    </article>
+
+                    <article class="confianza__item">
+                        <div class="confianza__icono">⚡</div>
+                        <h3>Entrega rápida</h3>
+                        <p>Recibí tu pedido en el menor tiempo posible.</p>
+                    </article>
+
+                    <article class="confianza__item">
+                        <div class="confianza__icono">💬</div>
+                        <h3>Soporte local</h3>
+                        <p>Atención personalizada para ayudarte cuando lo necesites.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+        <!-- SUMAR NEGOCIO -->
+        <section class="sumate">
+
+            <div class="sumate__contenedor">
+
+                <h2 class="sumate__titulo">
+                    ¿Tenés un comercio en Baradero?
+                </h2>
+
+                <p class="sumate__descripcion">
+                    Sumate a Bary y empezá a vender online sin complicaciones.
+                    Llegá a más clientes y aumentá tus ventas desde hoy.
+                </p>
+
+                <div class="sumate__beneficios">
+                    <span>✔ Más visibilidad</span>
+                    <span>✔ Gestión simple de pedidos</span>
+                    <span>✔ Soporte local</span>
+                </div>
+
+                <a href="./pages/registrarse.html" class="btn btn--primario">
+                    Sumar mi negocio
+                </a>
+
+            </div>
+
         </section>
 
     </main>
-
     <footer class="footer">
 
         <div class="footer__container">
 
             <div class="footer__brand">
-                <img src="./img/moto-roja.png" alt="Logo Bary" class="footer__logo">
+                <img src="./img/moto-roja.png" alt="Logo Bary" class="footer__logo" loading="lazy">
                 <p class="footer__description">
                     Bary - Tu delivery en Baradero.
                     Lo que busques, lo encontrás.
@@ -198,9 +580,6 @@
         </div>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,119 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.destacados {
+    padding: v.$space-xl v.$space-lg;
+    background-color: #ffffff;
+
+    .titulo-seccion {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: v.$space-xl;
+        color: v.$color-text-primary;
+        font-weight: 700;
+    }
+
+    &__grid {
+        display: grid;
+        gap: v.$space-lg;
+
+        @include m.responsive(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include m.responsive(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* =============================
+   CARD LOCAL
+============================= */
+
+.local-card {
+    background-color: #ffffff; // blanco para contraste
+    border-radius: v.$radius-lg;
+    overflow: hidden;
+    box-shadow: v.$shadow-sm;
+    transition: v.$transition-base;
+    position: relative;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: v.$shadow-lg;
+    }
+
+    &__link {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__imagen {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__contenido {
+        padding: v.$space-md;
+    }
+
+    &__nombre {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: v.$space-sm;
+        color: v.$color-text-primary;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: v.$space-xs;
+        font-size: 0.9rem;
+        margin-bottom: v.$space-sm;
+    }
+
+    &__categoria {
+        font-size: 0.9rem;
+        color: v.$color-text-secondary;
+        margin-bottom: v.$space-xs;
+    }
+
+    &__pedidos {
+        font-size: 0.85rem;
+        color: v.$color-primary;
+        font-weight: 600;
+        margin-bottom: v.$space-sm;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        color: v.$color-text-secondary;
+    }
+
+    &__envio {
+        color: v.$color-success;
+        font-weight: 600;
+    }
+}
+
+/* =============================
+   BADGE DESTACADO
+============================= */
+
+.local-card__badge {
+    position: absolute;
+    top: v.$space-md;
+    left: v.$space-md;
+    background-color: v.$color-primary;
+    color: v.$color-text-inverse;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: v.$radius-md;
+    box-shadow: v.$shadow-sm;
+}

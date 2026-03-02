@@ -1,0 +1,96 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+/* =========================
+   SECCIÓN CONFIANZA
+========================= */
+
+.confianza {
+    padding: v.$space-xl v.$space-md;
+    background-color: v.$color-background;
+}
+
+.confianza__contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.confianza__titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: v.$space-xl;
+    color: v.$color-text-primary;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.confianza__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$space-xl;
+}
+
+/* Tablet */
+@include m.responsive(md) {
+    .confianza__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@include m.responsive(lg) {
+    .confianza__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.confianza__item {
+    background-color: #ffffff;
+    padding: v.$space-lg;
+    border-radius: v.$radius-lg;
+    box-shadow: v.$shadow-sm;
+    transition: v.$transition-base;
+}
+
+.confianza__item:hover {
+    transform: translateY(-5px);
+    box-shadow: v.$shadow-md;
+}
+
+/* =========================
+   ICONO
+========================= */
+
+.confianza__icono {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto v.$space-md auto;
+    border-radius: 50%;
+    background-color: v.$color-primary;
+    color: v.$color-text-inverse;
+    font-size: 1.4rem;
+
+    @include m.flex-center;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.confianza__item h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: v.$space-sm;
+}
+
+.confianza__item p {
+    font-size: 0.9rem;
+    color: v.$color-text-secondary;
+}

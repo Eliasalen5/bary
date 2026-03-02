@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="../js/main.js"></script>
+    <title>Carrito de compras | Bary</title>
+
+    <link rel="canonical" href="https://barycompleto.vercel.app/pages/carrito.html">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/moto-roja.png" type="image/png">
+
+    <meta name="author" content="Elias Alen Obregon">
+    <meta name="keywords" content="Bary, carrito, delivery, compras online, productos">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Revisá los productos que agregaste a tu carrito en Bary. Rápido y fácil.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bary">
+    <meta property="og:title" content="Carrito de compras | Bary">
+    <meta property="og:description" content="Revisá y finalizá tu pedido en Bary. Delivery en Baradero.">
+    <meta property="og:url" content="https://barycompleto.vercel.app/pages/carrito.html">
+    <meta property="og:image" content="https://barycompleto.vercel.app/img/opgraph.png">
+    <meta property="og:locale" content="es_AR">
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="encabezado__contenedor">
+
+            <input type="checkbox" class="encabezado__checkbox" id="menu-toggle">
+
+            <div class="encabezado__izquierda">
+                <label for="menu-toggle" class="encabezado__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <div class="encabezado__marca">
+                    <a href="../index.html" class="encabezado__logo">
+                        <img src="../img/moto-roja.png" alt="Bary - Inicio" width="120" height="120">
+                    </a>
+                    <p class="encabezado__eslogan">Tu delivery en Baradero</p>
+                </div>
+            </div>
+
+            <div class="encabezado__busqueda">
+                <div class="encabezado__ubicacion">
+                    <span class="ubicacion__titulo">Enviar a</span>
+                    <span class="ubicacion__direccion">📍 Tu dirección</span>
+                </div>
+                <label for="busqueda" class="visually-hidden">Buscar locales</label>
+                <input id="busqueda" type="search" class="encabezado__input" placeholder="Buscar locales">
+            </div>
+
+            <nav class="encabezado__nav" aria-label="Navegación principal">
+                <ul class="encabezado__lista">
+                    <li class="encabezado__item"><a href="../index.html" class="encabezado__enlace">Inicio</a></li>
+                    <li class="encabezado__item"><a href="./categorias.html" class="encabezado__enlace">Categorías</a>
+                    </li>
+                    <li class="encabezado__item"><a href="./locales.html" class="encabezado__enlace">Locales</a></li>
+                    <li class="encabezado__item"><a href="./registrarse.html" class="encabezado__enlace">Registrarse</a>
+                    </li>
+                    <li class="encabezado__item"><a href="./iniciosesion.html" class="encabezado__enlace">Iniciar
+                            sesión</a></li>
+                    <li class="encabezado__item"><a href="./carrito.html" class="encabezado__enlace">Carrito 🛒</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="carrito-main">
+        <section class="carrito">
+            <h1 class="carrito__titulo">Tu carrito de compras</h1>
+
+            <div class="carrito__lista">
+
+                <!-- Mensaje vacío -->
+                <p class="carrito__mensaje-vacio">
+                    Tu carrito está vacío.
+                    <a href="./locales.html">Explorá nuestros locales</a> y agregá productos 🍕
+                </p>
+
+                <!-- Producto 1 -->
+                <article class="carrito__producto">
+                    <img src="../img/pizza_casera.jpg" alt="Pizza Casera" class="carrito__imagen" width="120"
+                        height="120">
+                    <div class="carrito__info">
+                        <h3 class="carrito__nombre">Pizza Casera</h3>
+                        <p class="carrito__cantidad">Cantidad: 1</p>
+                        <p class="carrito__precio">$5000</p>
+                        <button class="carrito__quitar">Quitar</button>
+                    </div>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="carrito__producto">
+                    <img src="../img/milanesa.jpg" alt="Milanesa" class="carrito__imagen" width="120" height="120">
+                    <div class="carrito__info">
+                        <h3 class="carrito__nombre">Milanesa</h3>
+                        <p class="carrito__cantidad">Cantidad: 2</p>
+                        <p class="carrito__precio">$14000</p>
+                        <button class="carrito__quitar">Quitar</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="carrito__total">
+                <p>Total: <span>$19000</span></p>
+                <button class="carrito__comprar">Finalizar compra</button>
+
+                <!-- Acción secundaria -->
+                <div class="carrito__acciones-secundarias">
+                    <a href="./locales.html" class="carrito__seguir-comprando">
+                        ← Seguir comprando
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <img src="../img/moto-roja.png" alt="Logo Bary" class="footer__logo" width="120" height="120">
+                <p class="footer__description">Bary – Tu delivery en Baradero. Lo que busques, lo encontrás.</p>
+            </div>
+
+            <div class="footer__section">
+                <h4 class="footer__title">Información</h4>
+                <ul class="footer__list">
+                    <li>📍 Baradero, Buenos Aires</li>
+                    <li>🕒 Lun a Dom 9:00 - 23:00</li>
+                    <li>🚚 Envíos rápidos en tu zona</li>
+                    <li>💳 Aceptamos efectivo y transferencias</li>
+                </ul>
+            </div>
+
+            <div class="footer__section">
+                <h4 class="footer__title">Atención al cliente</h4>
+                <ul class="footer__list">
+                    <li>📞 +54 9 3329 000000</li>
+                    <li>💬 WhatsApp</li>
+                    <li>📧 contacto@bary.com</li>
+                </ul>
+            </div>
+
+            <div class="footer__section">
+                <h4 class="footer__title">Seguinos</h4>
+                <ul class="footer__social">
+                    <li><a href="#" class="footer__social-link">Instagram</a></li>
+                    <li><a href="#" class="footer__social-link">Facebook</a></li>
+                    <li><a href="#" class="footer__social-link">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>© 2026 Bary. Todos los derechos reservados.</p>
+            <div class="footer__legal">
+                <a href="#" class="footer__legal-link">Términos y condiciones</a>
+                <a href="#" class="footer__legal-link">Política de privacidad</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

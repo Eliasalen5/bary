@@ -1,0 +1,123 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+/* =========================
+   SECCIÓN MENÚ DEL DÍA
+========================= */
+
+.menu-dia {
+    padding: v.$space-xl v.$space-md;
+    background-color: #ffffff;
+    text-align: center;
+
+    .titulo-seccion {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: v.$space-xl;
+        color: v.$color-text-primary;
+    }
+}
+
+/* =========================
+   GRID MOBILE FIRST
+========================= */
+
+.menu-lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$space-xl;
+}
+
+/* Tablet */
+@include m.responsive(md) {
+    .menu-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@include m.responsive(lg) {
+    .menu-lista {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =========================
+   CARD PRODUCTO
+========================= */
+
+.producto {
+    background-color: #ffffff;
+    border-radius: v.$radius-lg;
+    padding: v.$space-lg;
+    box-shadow: v.$shadow-sm;
+    transition: v.$transition-base;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+    box-shadow: v.$shadow-lg;
+}
+
+/* Link */
+.producto__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   IMAGEN CIRCULAR
+========================= */
+
+.producto-imagen {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto v.$space-md auto;
+    display: block;
+    border: 4px solid v.$color-background;
+    transition: v.$transition-fast;
+}
+
+/* pequeño efecto premium */
+.producto:hover .producto-imagen {
+    transform: scale(1.05);
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.producto-nombre {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: v.$space-xs;
+    color: v.$color-text-primary;
+}
+
+.producto-descripcion {
+    font-size: 0.9rem;
+    color: v.$color-text-secondary;
+    margin-bottom: v.$space-sm;
+}
+
+.producto-precio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: v.$color-primary;
+    margin-bottom: v.$space-md;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.producto-boton {
+    @include m.button-base;
+    @include m.button-variant(v.$color-primary, v.$color-text-inverse);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    width: 100%;
+}

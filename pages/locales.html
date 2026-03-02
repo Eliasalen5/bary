@@ -4,63 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión | Bary - Delivery en Baradero</title>
+    <script defer src="../js/main.js"></script>
+    <title>Locales en Baradero | Bary</title>
 
-    <link rel="canonical" href="https://barycompleto.vercel.app/pages/iniciosesion.html">
+    <link rel="canonical" href="https://barycompleto.vercel.app/pages/locales.html">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/moto-roja.png" type="image/png">
 
     <meta name="author" content="Elias Alen Obregon">
-    <meta name="keywords" content="iniciar sesión Bary, login delivery Baradero, cuenta Bary, pedidos online Baradero">
-    <meta name="robots" content="index, follow">
     <meta name="description"
-        content="Inicia sesión en Bary para acceder a tu cuenta, ver tus pedidos y disfrutar de todas nuestras ofertas y productos.">
+        content="Descubrí los mejores locales de delivery en Baradero. Pedí online en panaderías, carnicerías, heladerías y más con Bary.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="locales en Baradero, delivery Baradero, comercios Baradero, pedir online">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Bary">
-    <meta property="og:title" content="Iniciar sesión | Bary - Delivery en Baradero">
+    <meta property="og:title" content="Locales en Baradero | Bary">
     <meta property="og:description"
-        content="Inicia sesión en Bary para acceder a tu cuenta, ver tus pedidos y disfrutar de todas nuestras ofertas y productos.">
-    <meta property="og:url" content="https://barycompleto.vercel.app/pages/iniciosesion.html">
+        content="Descubrí los mejores locales de delivery en Baradero. Panaderías, carnicerías, heladerías y más.">
+    <meta property="og:url" content="https://barycompleto.vercel.app/pages/locales.html">
     <meta property="og:image" content="https://barycompleto.vercel.app/img/opgraph.png">
     <meta property="og:locale" content="es_AR">
 </head>
 
 <body>
     <header class="encabezado">
-
         <div class="encabezado__contenedor">
-
             <input type="checkbox" class="encabezado__checkbox" id="menu-toggle">
 
             <div class="encabezado__izquierda">
-
                 <label for="menu-toggle" class="encabezado__toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </label>
 
                 <div class="encabezado__marca">
                     <a href="../index.html" class="encabezado__logo">
-                        <img src="../img/moto-roja.png" alt="Logo Bary">
+                        <img src="../img/moto-roja.png" alt="Bary - Inicio" width="120" height="120">
                     </a>
-                    <p class="encabezado__eslogan">
-                        Tu delivery en Baradero
-                    </p>
+                    <p class="encabezado__eslogan">Tu delivery en Baradero</p>
                 </div>
-
             </div>
 
             <div class="encabezado__busqueda">
                 <div class="encabezado__ubicacion">
                     <span class="ubicacion__titulo">Enviar a</span>
-                    <span class="ubicacion__direccion">
-                        📍 Tu dirección
-                    </span>
+                    <span class="ubicacion__direccion">📍 Tu dirección</span>
                 </div>
-
-                <input type="text" class="encabezado__input" placeholder="Buscar locales">
+                <label for="busqueda" class="visually-hidden">Buscar locales</label>
+                <input id="busqueda" type="search" class="encabezado__input" placeholder="Buscar locales">
             </div>
 
             <nav class="encabezado__nav" aria-label="Navegación principal">
@@ -68,70 +59,72 @@
                     <li class="encabezado__item"><a href="../index.html" class="encabezado__enlace">Inicio</a></li>
                     <li class="encabezado__item"><a href="../pages/categorias.html"
                             class="encabezado__enlace">Categorías</a></li>
-                    <li class="encabezado__item"><a href="../pages/locales.html" class="encabezado__enlace">Locales</a>
-                    </li>
+                    <li class="encabezado__item"><a href="./locales.html" class="encabezado__enlace">Locales</a></li>
                     <li class="encabezado__item"><a href="../pages/registrarse.html"
                             class="encabezado__enlace">Registrarse</a></li>
-                    <li class="encabezado__item"><a href="./iniciosesion.html" class="encabezado__enlace">Iniciar
+                    <li class="encabezado__item"><a href="../pages/iniciosesion.html" class="encabezado__enlace">Iniciar
                             sesión</a></li>
                     <li class="encabezado__item"><a href="../pages/carrito.html" class="encabezado__enlace">Carrito
                             🛒</a></li>
                 </ul>
             </nav>
-
         </div>
-
     </header>
 
+    <main class="locales-main">
 
-    <main class="login">
-        <div class="login__container">
-            <form class="login__form">
+        <section class="locales">
 
-                <h1 class="login__title">Iniciar sesión</h1>
+            <h1 class="locales__titulo" id="titulo-locales">
+                Locales en Baradero
+            </h1>
 
-                <div class="login__field">
-                    <label for="email_login" class="login__label">Email</label>
-                    <input type="email" id="email_login" name="email" class="login__input"
-                        placeholder="nombre@email.com" required>
-                </div>
+            <p class="locales__descripcion">
+                Elegí tu comercio favorito y empezá a pedir en minutos.
+            </p>
 
-                <div class="login__field">
-                    <label for="pass_login" class="login__label">Contraseña</label>
-                    <input type="password" id="pass_login" name="password" class="login__input" required>
-                </div>
+            <div class="locales__estado">
+                <p id="contador-locales">Mostrando 3 locales disponibles</p>
+            </div>
 
-                <div class="login__remember">
-                    <label>
-                        <input type="checkbox">
-                        Recordarme
-                    </label>
-                </div>
+            <div class="locales__grid">
 
-                <button type="submit" class="login__button">
-                    Iniciar sesión
-                </button>
+                <!-- Local 1 -->
+                <a href="./local.html?local=pizzacasera" class="local-card">
+                    <img src="../img/pizzeria.jpg" alt="Pizza Casera en Baradero" class="local-card__imagen" width="800"
+                        height="800" loading="lazy">
+                    <h2 class="local-card__nombre">Pizza Casera</h2>
+                    <span class="local-card__categoria">Pizzería</span>
+                </a>
 
-                <p class="login__extra">
-                    ¿No tenés cuenta?
-                    <a href="../pages/registrarse.html">Registrate acá</a>
-                </p>
+                <!-- Local 2 -->
+                <a href="./local.html?local=donjose" class="local-card">
+                    <img src="../img/carnicerias.jpg" alt="Carnicería Don José en Baradero" class="local-card__imagen"
+                        width="800" height="800" loading="lazy">
+                    <h2 class="local-card__nombre">Carnicería Don José</h2>
+                    <span class="local-card__categoria">Carnicería</span>
+                </a>
 
-            </form>
-        </div>
+                <!-- Local 3 -->
+                <a href="./local.html?local=frio-sur" class="local-card">
+                    <img src="../img/helado.jpeg" alt="Heladería Frío Sur en Baradero" class="local-card__imagen"
+                        width="800" height="800" loading="lazy">
+                    <h2 class="local-card__nombre">Heladería Frío Sur</h2>
+                    <span class="local-card__categoria">Heladería</span>
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
-
     <footer class="footer">
-
         <div class="footer__container">
-
             <div class="footer__brand">
-                <img src="../img/moto-roja.png" alt="Logo Bary" class="footer__logo">
-                <p class="footer__description">
-                    Bary – Tu delivery en Baradero.
-                    Lo que busques, lo encontrás.
-                </p>
+                <img src="../img/moto-roja.png" alt="Logo Bary" class="footer__logo" width="120" height="120"
+                    loading="lazy">
+                <p class="footer__description">Bary – Tu delivery en Baradero. Lo que busques, lo encontrás.</p>
             </div>
 
             <div class="footer__section">
@@ -161,7 +154,6 @@
                     <li><a href="#" class="footer__social-link">TikTok</a></li>
                 </ul>
             </div>
-
         </div>
 
         <div class="footer__bottom">
@@ -171,7 +163,6 @@
                 <a href="#" class="footer__legal-link">Política de privacidad</a>
             </div>
         </div>
-
     </footer>
 </body>
 

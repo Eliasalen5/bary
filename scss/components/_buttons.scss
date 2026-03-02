@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.btn {
+    @include m.button-base;
+
+    &--primario {
+        @include m.button-variant(
+            v.$color-text-inverse,
+            v.$color-primary
+        );
+
+        border: none;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: v.$shadow-lg;
+        }
+    }
+
+    &--secundario {
+        background: transparent;
+        color: v.$color-text-inverse;
+        border: 2px solid v.$color-text-inverse;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+    }
+}

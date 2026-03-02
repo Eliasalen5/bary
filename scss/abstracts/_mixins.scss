@@ -1,0 +1,66 @@
+@use "variables" as v;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: v.$space-sm v.$space-md;
+    border-radius: v.$radius-md;
+    font-weight: 600;
+    transition: v.$transition-base;
+    cursor: pointer;
+}
+
+@mixin button-variant($bg, $color) {
+    background-color: $bg;
+    color: $color;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+@mixin card {
+    background-color: v.$color-surface;
+    border-radius: v.$radius-lg;
+    box-shadow: v.$shadow-md;
+    padding: v.$space-md;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==sm {
+        @media (min-width: 576px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==xl {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}

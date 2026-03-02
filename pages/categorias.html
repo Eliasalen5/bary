@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias | Bary - Lo que busques lo encontrás</title>
+    <script defer src="../js/main.js"></script>
+    <title>Categorías de Delivery en Baradero | Bary</title>
 
-    <link rel="canonical" href="https://barycompleto.vercel.app/">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="canonical" href="https://barycompleto.vercel.app/pages/categorias.html">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/moto-roja.png" type="image/png">
 
     <meta name="author" content="Elias Alen Obregon">
-    <meta name="keywords" content="productos, ofertas, tienda online, Bary, compras, descuentos">
+    <meta name="keywords" content="delivery Baradero, categorías delivery, panaderías Baradero, supermercados Baradero, pedir comida online">
     <meta name="robots" content="index, follow">
-
-    <meta name="description" content="Explorá las categorías de productos en Bary. Ofertas, variedad y calidad en un solo lugar.">
+    <meta name="description"
+        content="Descubrí todas las categorías de delivery en Baradero. Panaderías, heladerías, supermercados y más. Pedí online con Bary.">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Bary">
     <meta property="og:title" content="Categorías | Bary">
-    <meta property="og:description" content="Explorá las categorías de productos en Bary. Ofertas, variedad y calidad en un solo lugar.">
-    <meta property="og:url" content="https://barycompleto.vercel.app/">
+    <meta property="og:description"
+        content="Descubrí todas las categorías de delivery en Baradero. Panaderías, heladerías, supermercados y más. Pedí online con Bary.">
+    <meta property="og:url" content="https://barycompleto.vercel.app/pages/categorias.html">
     <meta property="og:image" content="https://barycompleto.vercel.app/img/opgraph.png">
     <meta property="og:locale" content="es_AR">
 </head>
@@ -44,7 +44,7 @@
 
                 <div class="encabezado__marca">
                     <a href="../index.html" class="encabezado__logo">
-                        <img src="../img/moto-roja.png" alt="Logo Bary">
+                        <img src="../img/moto-roja.png" alt="Bary - Inicio" width="120" height="120">
                     </a>
                     <p class="encabezado__eslogan">
                         Tu delivery en Baradero
@@ -61,20 +61,23 @@
                     </span>
                 </div>
 
-                <input type="text" class="encabezado__input" placeholder="Buscar locales">
+                <label for="busqueda" class="visually-hidden">Buscar Categorias</label>
+                <input id="busqueda" type="search" class="encabezado__input" placeholder="Buscar categoría...">
             </div>
 
             <nav class="encabezado__nav" aria-label="Navegación principal">
                 <ul class="encabezado__lista">
                     <li class="encabezado__item"><a href="../index.html" class="encabezado__enlace">Inicio</a></li>
-                    <li class="encabezado__item"><a href="./categorias.html"
-                            class="encabezado__enlace">Categorías</a></li>
-                    <li class="encabezado__item"><a href="../pages/producto.html"
-                            class="encabezado__enlace">Productos</a></li>
+                    <li class="encabezado__item"><a href="./categorias.html" class="encabezado__enlace">Categorías</a>
+                    </li>
+                    <li class="encabezado__item"><a href="../pages/locales.html" class="encabezado__enlace">Locales</a>
+                    </li>
                     <li class="encabezado__item"><a href="../pages/registrarse.html"
                             class="encabezado__enlace">Registrarse</a></li>
                     <li class="encabezado__item"><a href="../pages/iniciosesion.html" class="encabezado__enlace">Iniciar
                             sesión</a></li>
+                    <li class="encabezado__item"><a href="../pages/carrito.html" class="encabezado__enlace">Carrito
+                            🛒</a></li>
                 </ul>
             </nav>
 
@@ -85,63 +88,66 @@
 
     <main class="categorias-main">
 
-        <section>
-            <h1 class="text-center mb-4">Tus negocios aquí</h1>
+        <section class="categorias">
 
-            <div id="carouselCategorias" class="carousel slide" data-bs-ride="carousel">
+            <h1 class="categorias__titulo">
+                Categorías de Delivery en Baradero
+            </h1>
 
-                <div class="carousel-inner rounded">
+            <p class="categorias__descripcion">
+                Descubrí los mejores comercios de Baradero organizados por tipo.
+                Elegí tu categoría favorita y empezá a pedir en minutos.
+            </p>
 
-                    <div class="carousel-item active">
-                        <img src="../img/carnicerias.jpg" class="d-block w-100" alt="Carnicerías">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Carnicerías</h5>
-                        </div>
-                    </div>
+            <div class="categorias__grid">
 
-                    <div class="carousel-item">
-                        <img src="../img/helado.jpeg" class="d-block w-100" alt="Heladerías">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Heladerías</h5>
-                        </div>
-                    </div>
+                <a href="../pages/locales.html?categoria=carnicerias" class="categoria">
+                    <img src="../img/carnicerias.jpg" alt="Carnicerías en Baradero" class="categoria__imagen"
+                        width="800" height="800" loading="lazy">
+                    <h2 class="categoria__nombre">Carnicerías</h2>
+                    <span class="categoria__cantidad">
+                        7 locales disponibles
+                    </span>
+                </a>
 
-                    <div class="carousel-item">
-                        <img src="../img/medialunas.jpg" class="d-block w-100" alt="Panaderías">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Panaderías</h5>
-                        </div>
-                    </div>
+                <a href="../pages/locales.html?categoria=heladerias" class="categoria">
+                    <img src="../img/helado.jpeg" alt="Heladerías en Baradero" class="categoria__imagen" width="800"
+                        height="800" loading="lazy">
+                    <h2 class="categoria__nombre">Heladerías</h2>
+                    <span class="categoria__cantidad">
+                        10 locales disponibles
+                    </span>
+                </a>
 
-                    <div class="carousel-item">
-                        <img src="../img/supermercado.jpg" class="d-block w-100" alt="Supermercados">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Supermercados</h5>
-                        </div>
-                    </div>
+                <a href="../pages/locales.html?categoria=panaderias" class="categoria">
+                    <img src="../img/medialunas.jpg" alt="Panaderías en Baradero" class="categoria__imagen" width="800"
+                        height="800" loading="lazy">
+                    <h2 class="categoria__nombre">Panaderías</h2>
+                    <span class="categoria__cantidad">
+                        8 locales disponibles
+                    </span>
+                </a>
 
-                    <div class="carousel-item">
-                        <img src="../img/caramelos.jpeg" class="d-block w-100" alt="Kioscos">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Kioscos</h5>
-                        </div>
-                    </div>
+                <a href="../pages/locales.html?categoria=supermercados" class="categoria">
+                    <img src="../img/supermercado.jpg" alt="Supermercados en Baradero" class="categoria__imagen"
+                        width="800" height="800" loading="lazy">
+                    <h2 class="categoria__nombre">Supermercados</h2>
+                    <span class="categoria__cantidad">
+                        5 locales disponibles
+                    </span>
+                </a>
 
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCategorias"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselCategorias"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+                <a href="../pages/locales.html?categoria=kioscos" class="categoria">
+                    <img src="../img/caramelos.jpeg" alt="Kioscos en Baradero" class="categoria__imagen" width="800"
+                        height="800" loading="lazy">
+                    <h2 class="categoria__nombre">Kioscos</h2>
+                    <span class="categoria__cantidad">
+                        10 locales disponibles
+                    </span>
+                </a>
 
             </div>
+
         </section>
 
     </main>
@@ -151,7 +157,8 @@
         <div class="footer__container">
 
             <div class="footer__brand">
-                <img src="../img/moto-roja.png" alt="Logo Bary" class="footer__logo">
+                <img src="../img/moto-roja.png" alt="Logo Bary" class="footer__logo" width="120" height="120"
+                    loading="lazy">
                 <p class="footer__description">
                     Bary – Tu delivery en Baradero.
                     Lo que busques, lo encontrás.
@@ -197,9 +204,6 @@
         </div>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,74 @@
+@use "../abstracts/variables" as v;
+/* =========================
+   RESET GLOBAL
+========================= */
+
+/* Box sizing universal */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Quitar márgenes por defecto */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Altura base */
+html,
+body {
+    height: 100%;
+}
+
+/* Mejor renderizado de texto */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Imágenes y media responsivos */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Formularios heredan tipografía */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Botones sin estilos raros */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Quitar estilos de listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Links sin decoración por defecto */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Evitar overflow horizontal accidental */
+body {
+    overflow-x: hidden;
+    padding-top: v.$header-height;
+}
+

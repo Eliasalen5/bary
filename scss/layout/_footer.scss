@@ -1,0 +1,164 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.footer {
+    background-color: v.$color-text-primary;
+    color: v.$color-text-inverse;
+    padding-top: v.$space-xl;
+
+    /* ========================
+       CONTENEDOR PRINCIPAL
+    ======================== */
+
+    &__container {
+        display: grid;
+        gap: v.$space-xl;
+        padding: 0 v.$space-md v.$space-xl;
+
+        /* Mobile centrado */
+        text-align: center;
+        justify-items: center;
+    }
+
+    /* ========================
+       MARCA
+    ======================== */
+
+    &__brand {
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-md;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 90px;
+        height: auto;
+    }
+
+    &__description {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.4;
+    }
+
+    /* ========================
+       SECCIONES
+    ======================== */
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-sm;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: v.$space-sm;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-xs;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* ========================
+       REDES
+    ======================== */
+
+    &__social {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-sm;
+    }
+
+    &__social-link {
+        text-decoration: none;
+        color: v.$color-text-inverse;
+        font-size: 0.9rem;
+        transition: v.$transition-fast;
+
+        &:hover {
+            color: v.$color-primary;
+        }
+    }
+
+    /* ========================
+       BOTTOM
+    ======================== */
+
+    &__bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: v.$space-md;
+        font-size: 0.85rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-sm;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__legal {
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-xs;
+    }
+
+    &__legal-link {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.7);
+        transition: v.$transition-fast;
+
+        &:hover {
+            color: v.$color-primary;
+        }
+    }
+
+    /* ========================
+       DESKTOP (≥992px)
+    ======================== */
+
+    @include m.responsive(lg) {
+
+        &__container {
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            /* Desktop alineado a la izquierda */
+            text-align: left;
+            justify-items: start;
+        }
+
+        &__brand,
+        &__section {
+            align-items: flex-start;
+        }
+
+        &__bottom {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        &__legal {
+            flex-direction: row;
+            gap: v.$space-md;
+        }
+    }
+}

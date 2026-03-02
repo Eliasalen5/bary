@@ -1,0 +1,167 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.home {
+    .hero {
+        background-color: v.$color-background;
+        padding: v.$space-xl 0;
+        text-align: center;
+
+        &__titulo {
+            font-size: 2rem;
+            color: v.$color-text-primary;
+            margin-bottom: v.$space-sm;
+        }
+
+        &__descripcion {
+            font-size: 1rem;
+            color: v.$color-text-secondary;
+            margin-bottom: v.$space-md;
+        }
+
+        &__acciones {
+            @include m.flex-center;
+            gap: v.$space-md;
+
+            .btn {
+                @include m.button-base;
+
+                &--primario {
+                    @include m.button-variant(v.$color-primary, v.$color-text-inverse);
+                }
+
+                &--secundario {
+                    @include m.button-variant(v.$color-background, v.$color-text-primary);
+                    border: 1px solid v.$color-border;
+                }
+            }
+        }
+    }
+
+    .categorias {
+        padding: v.$space-lg 0;
+        text-align: center;
+
+        .titulo-seccion {
+            font-size: 1.5rem;
+            margin-bottom: v.$space-md;
+            color: v.$color-text-primary;
+        }
+
+        .articulos-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: v.$space-md;
+
+            .articulo {
+                text-decoration: none;
+                color: inherit;
+
+                &-imagen {
+                    width: 100%;
+                    border-radius: v.$radius-md;
+                    box-shadow: v.$shadow-sm;
+                }
+
+                &-titulo {
+                    margin-top: v.$space-sm;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .destacados,
+    .ofertas,
+    .menu-dia {
+        padding: v.$space-lg 0;
+
+        .titulo-seccion {
+            font-size: 1.5rem;
+            margin-bottom: v.$space-md;
+            text-align: center;
+            color: v.$color-text-primary;
+        }
+    }
+
+    .destacados__grid,
+    .ofertas__grid,
+    .menu-lista {
+        display: grid;
+        gap: v.$space-md;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .local-card,
+    .oferta-card,
+    .producto {
+        @include m.card;
+
+        &__imagen {
+            width: 100%;
+            border-radius: v.$radius-sm;
+        }
+
+        &__nombre {
+            font-weight: 600;
+            margin-top: v.$space-xs;
+        }
+
+        &__rating,
+        &__info,
+        &__precios {
+            font-size: 0.9rem;
+            color: v.$color-text-secondary;
+            margin-top: v.$space-xs;
+        }
+
+        &__badge,
+        &__descuento {
+            background-color: v.$color-primary;
+            color: v.$color-text-inverse;
+            padding: v.$space-xs v.$space-sm;
+            border-radius: v.$radius-sm;
+            font-weight: 600;
+            position: absolute;
+            top: v.$space-sm;
+            left: v.$space-sm;
+        }
+
+        &__boton,
+        .producto-boton {
+            @include m.button-base;
+            @include m.button-variant(v.$color-primary, v.$color-text-inverse);
+            width: 100%;
+            margin-top: v.$space-sm;
+        }
+    }
+
+    .confianza,
+    .sumate {
+        padding: v.$space-lg 0;
+        text-align: center;
+
+        &__grid {
+            display: grid;
+            gap: v.$space-md;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            margin-top: v.$space-md;
+        }
+
+        &__item {
+            background-color: v.$color-surface;
+            border-radius: v.$radius-md;
+            padding: v.$space-md;
+            box-shadow: v.$shadow-sm;
+
+            h3 {
+                margin-top: v.$space-xs;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: v.$color-text-secondary;
+            }
+        }
+    }
+}

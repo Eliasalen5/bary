@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+/* =========================
+   SECCIÓN SUMATE
+========================= */
+
+.sumate {
+    padding: v.$space-xl v.$space-md;
+    background-color: v.$color-primary;
+    color: v.$color-text-inverse;
+    text-align: center;
+}
+
+.sumate__contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sumate__titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: v.$space-md;
+}
+
+.sumate__descripcion {
+    font-size: 1rem;
+    margin-bottom: v.$space-lg;
+    line-height: 1.6;
+}
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.sumate__beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-sm;
+    margin-bottom: v.$space-xl;
+    font-weight: 600;
+}
+
+/* Tablet */
+@include m.responsive(md) {
+    .sumate__beneficios {
+        flex-direction: row;
+        justify-content: center;
+        gap: v.$space-lg;
+    }
+}
+
+/* =========================
+   BOTÓN CTA
+========================= */
+
+.sumate .btn--primario {
+    @include m.button-base;
+    background-color: #ffffff;
+    color: v.$color-primary;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: v.$transition-base;
+}
+
+.sumate .btn--primario:hover {
+    background-color: #ffe6d8;
+    transform: translateY(-3px);
+}

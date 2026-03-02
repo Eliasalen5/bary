@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.hero {
+    padding: v.$space-xl v.$space-md;
+    background: linear-gradient(
+        10deg,
+        v.$color-background,
+        v.$color-primary,
+    );
+    color: v.$color-text-inverse;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &__contenido {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__titulo {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: v.$space-lg;
+    }
+
+    &__descripcion {
+        font-size: 1.1rem;
+        opacity: 0.95;
+        margin-bottom: v.$space-xl;
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+    &__acciones {
+        @include m.flex-center;
+        gap: v.$space-md;
+        flex-wrap: wrap;
+    }
+}

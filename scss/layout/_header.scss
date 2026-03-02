@@ -1,0 +1,200 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.encabezado {
+    height: v.$header-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: v.$color-hedear;
+    box-shadow: v.$shadow-sm;
+
+    &__contenedor {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: v.$space-sm;
+        padding: 0 v.$space-md;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    /* ========================
+       IZQUIERDA
+    ======================== */
+
+    &__izquierda {
+        @include m.flex-center;
+        gap: v.$space-sm;
+        flex-shrink: 0;
+    }
+
+    &__toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+
+        span {
+            width: 22px;
+            height: 3px;
+            background-color: v.$color-text-primary;
+            border-radius: v.$radius-sm;
+            transition: v.$transition-base;
+        }
+    }
+
+    &__marca {
+        display: flex;
+        align-items: center;
+        gap: v.$space-sm;
+
+        img {
+            width: 80px;
+            height: auto;
+        }
+    }
+
+    &__eslogan {
+        display: none;
+        font-size: 0.8rem;
+        color: v.$color-text-secondary;
+    }
+
+    /* ========================
+       BUSQUEDA
+    ======================== */
+
+    &__busqueda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: v.$space-xs;
+        flex: 1;
+        min-width: 0;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    &__ubicacion {
+        display: flex;
+        align-items: center;
+        gap: v.$space-xs;
+        font-size: 0.85rem;
+        color: v.$color-text-secondary;
+        white-space: nowrap;
+    }
+
+    &__input {
+        width: 100%;
+        padding: v.$space-sm v.$space-md;
+        border-radius: v.$radius-lg;
+        border: 1px solid v.$color-border;
+        background-color: #fff;
+        transition: v.$transition-base;
+
+        &:focus {
+            outline: none;
+            border-color: v.$color-primary;
+            box-shadow: 0 0 0 3px rgba(225, 6, 0, 0.15);
+        }
+    }
+
+    /* ========================
+       NAV MOBILE (lateral)
+    ======================== */
+
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 260px;
+        height: 100vh;
+        background-color: v.$color-hedear;
+        padding: v.$space-xl v.$space-md;
+        transition: left v.$transition-base;
+        box-shadow: v.$shadow-lg;
+        z-index: 1100;
+    }
+
+    &__lista {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-md;
+    }
+
+    &__enlace {
+        text-decoration: none;
+        font-weight: 500;
+        color: v.$color-text-primary;
+        transition: v.$transition-fast;
+
+        &:hover {
+            color: v.$color-primary;
+        }
+    }
+
+    /* ========================
+       OVERLAY (fondo oscuro)
+    ======================== */
+
+    &__overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity v.$transition-base;
+        z-index: 1050;
+    }
+
+    /* Abrir menú */
+    &__checkbox:checked ~ &__nav {
+        left: 0;
+    }
+
+    /* Mostrar overlay */
+    &__checkbox:checked ~ &__overlay {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    /* ========================
+       DESKTOP (≥992px)
+    ======================== */
+
+    @include m.responsive(lg) {
+
+        &__toggle {
+            display: none;
+        }
+
+        &__eslogan {
+            display: block;
+        }
+
+        &__nav {
+            position: static;
+            height: auto;
+            width: auto;
+            padding: 0;
+            box-shadow: none;
+        }
+
+        &__lista {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__overlay {
+            display: none;
+        }
+    }
+}
