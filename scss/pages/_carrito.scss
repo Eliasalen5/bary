@@ -1,0 +1,185 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+/* =========================
+   MAIN CARRITO
+========================= */
+
+.carrito-main {
+    padding: v.$space-xl v.$space-md;
+}
+
+/* =========================
+   SECCIÓN CARRITO
+========================= */
+
+.carrito {
+    max-width: 900px;
+    margin: 0 auto;
+
+    &__titulo {
+        text-align: center;
+        margin-bottom: v.$space-lg;
+        color: v.$color-text-primary;
+    }
+
+    /* =========================
+       LISTA PRODUCTOS
+    ========================= */
+
+    &__lista {
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-md;
+        margin-bottom: v.$space-lg;
+    }
+
+    /* =========================
+       MENSAJE CARRITO VACÍO
+    ========================= */
+
+    &__mensaje-vacio {
+        text-align: center;
+        background: v.$color-surface;
+        padding: v.$space-lg;
+        border-radius: v.$radius-lg;
+        box-shadow: v.$shadow-sm;
+
+        a {
+            color: v.$color-primary;
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* =========================
+       PRODUCTO
+    ========================= */
+
+    &__producto {
+        @include m.card;
+        display: flex;
+        gap: v.$space-md;
+        align-items: center;
+    }
+
+    &__imagen {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: v.$radius-md;
+    }
+
+    &__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-xs;
+    }
+
+    &__nombre {
+        font-size: 1rem;
+        font-weight: 600;
+        color: v.$color-text-primary;
+    }
+
+    &__cantidad {
+        font-size: 0.9rem;
+        color: v.$color-text-secondary;
+    }
+
+    &__precio {
+        font-weight: 600;
+        color: v.$color-primary;
+    }
+
+    &__quitar {
+        margin-top: v.$space-xs;
+        font-size: 0.85rem;
+        color: v.$color-error;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    /* =========================
+       TOTAL
+    ========================= */
+
+    &__total {
+        @include m.card;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: v.$space-md;
+
+        span {
+            font-weight: 700;
+            color: v.$color-primary;
+        }
+    }
+
+    &__comprar {
+        @include m.button-base;
+        @include m.button-variant(v.$color-primary, v.$color-text-inverse);
+
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    /* =========================
+       ACCIONES SECUNDARIAS
+    ========================= */
+
+    &__acciones-secundarias {
+        margin-top: v.$space-sm;
+    }
+
+    &__seguir-comprando {
+        font-size: 0.9rem;
+        color: v.$color-text-secondary;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@include m.responsive(md) {
+
+    .carrito {
+
+        &__producto {
+            gap: v.$space-lg;
+        }
+
+        &__imagen {
+            width: 110px;
+            height: 110px;
+        }
+
+        &__nombre {
+            font-size: 1.1rem;
+        }
+
+        &__total {
+            text-align: left;
+        }
+
+        &__comprar {
+            width: fit-content;
+            align-self: flex-start;
+        }
+
+    }
+
+}

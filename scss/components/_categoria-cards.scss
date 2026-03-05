@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.categorias {
+    padding: v.$space-xl v.$space-md;
+
+    .titulo-seccion {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: v.$space-xl;
+        color: v.$color-text-primary;
+    }
+
+    .articulos-lista {
+        display: grid;
+        gap: v.$space-lg;
+
+        @include m.responsive(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include m.responsive(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.articulo {
+    position: relative;
+    display: block;
+    border-radius: v.$radius-lg;
+    overflow: hidden;
+    text-decoration: none;
+    height: 240px;
+    transition: transform v.$transition-base;
+
+    box-shadow: v.$shadow-md;
+
+    &-imagen {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform v.$transition-base;
+    }
+
+    &-titulo {
+        position: absolute;
+        bottom: v.$space-md;
+        left: v.$space-md;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: v.$color-text-inverse;
+        z-index: 2;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.1)
+        );
+        z-index: 1;
+    }
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: v.$shadow-lg;
+    }
+
+    &:hover .articulo-imagen {
+        transform: scale(1.05);
+    }
+}

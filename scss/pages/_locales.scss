@@ -1,0 +1,107 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+/* =========================
+   MAIN
+========================= */
+
+.locales-main {
+    padding: v.$space-xl v.$space-md;
+    background-color: v.$color-background;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.locales {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.locales__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: v.$color-text-primary;
+    margin-bottom: v.$space-sm;
+}
+
+.locales__descripcion {
+    color: v.$color-text-secondary;
+    margin-bottom: v.$space-md;
+}
+
+.locales__estado {
+    margin-bottom: v.$space-xl;
+    font-size: 0.95rem;
+    color: v.$color-text-secondary;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.locales__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: v.$space-lg;
+}
+
+/* Tablet */
+@include m.responsive(md) {
+    .locales__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@include m.responsive(lg) {
+    .locales__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =========================
+   CARD LOCAL
+========================= */
+
+.local-card {
+    @include m.card;
+    text-decoration: none;
+    color: v.$color-text-primary;
+    transition: v.$transition-base;
+    display: block;
+    text-align: left;
+}
+
+.local-card:hover {
+    transform: translateY(-6px);
+    box-shadow: v.$shadow-lg;
+}
+
+/* Imagen */
+
+.local-card__imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: v.$radius-md;
+    margin-bottom: v.$space-md;
+}
+
+/* Nombre */
+
+.local-card__nombre {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: v.$space-xs;
+}
+
+/* Categoría */
+
+.local-card__categoria {
+    font-size: 0.9rem;
+    color: v.$color-primary;
+    font-weight: 600;
+}

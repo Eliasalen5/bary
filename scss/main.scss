@@ -5,22 +5,18 @@
 
 @use "base/reset";
 @use "base/typography";
-@use "base/animation";
 @use "base/utilities";
-@use "layout/container";
-@use "layout/grid";
 @use "layout/header";
 @use "layout/footer";
-@use "layout/navigation";
 
 @use "components/buttons";
-@use "components/cards";
-@use "components/forms";
-@use "components/rating";
-@use "components/badges";
-@use "components/alerts";
-@use "components/modals";
-@use "components/carrito-item";
+@use "components/categoria-cards";
+@use "components/locales-cards";
+@use "components/hero";
+@use "components/ofertas";
+@use "components/menu";
+@use "components/confianza";
+@use "components/sumar";
 
 @use "pages/home";
 @use "pages/categorias";
@@ -28,9 +24,3 @@
 @use "pages/registro";
 @use "pages/login";
 @use "pages/carrito";
-@use "pages/hero";
-@use "pages/destacados";
-@use "pages/ofertas";
-@use "pages/menu";
-@use "pages/confianza";
-@use "pages/sumar";

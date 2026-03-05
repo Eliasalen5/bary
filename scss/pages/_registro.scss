@@ -1,0 +1,165 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+/* =========================
+   MAIN
+========================= */
+
+.registro {
+    padding: v.$space-xl v.$space-md;
+    background-color: v.$color-background;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 80vh;
+}
+
+/* =========================
+   TITULO Y DESCRIPCION
+========================= */
+
+.registro__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: v.$space-sm;
+    color: v.$color-text-primary;
+}
+
+.registro__descripcion {
+    margin-bottom: v.$space-xl;
+    color: v.$color-text-secondary;
+}
+
+/* =========================
+   SELECTOR (TABS)
+========================= */
+
+.registro__selector {
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-sm;
+    margin-bottom: v.$space-xl;
+}
+
+.selector__btn {
+    @include m.button-base;
+    border: 2px solid v.$color-primary;
+    background-color: transparent;
+    color: v.$color-primary;
+    font-weight: 600;
+}
+
+.selector__btn.active {
+    background-color: v.$color-primary;
+    color: v.$color-text-inverse;
+}
+
+.selector__btn:hover {
+    background-color: v.$color-primary-hover;
+    color: v.$color-text-inverse;
+}
+
+/* Tablet */
+@include m.responsive(md) {
+    .registro__selector {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* =========================
+   GRID FORMULARIOS
+========================= */
+
+.registro__grid {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: v.$space-lg;
+}
+
+/* Desktop */
+@include m.responsive(lg) {
+    .registro__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   CARD
+========================= */
+.registro__card {
+    @include m.card;
+    text-align: left;
+    width: 100%;
+    max-width: 520px;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-md;
+}
+
+.formulario legend {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: v.$space-sm;
+    color: v.$color-text-primary;
+}
+
+.formulario__intro {
+    font-size: 0.95rem;
+    color: v.$color-text-secondary;
+}
+
+.formulario__grupo {
+    display: flex;
+    flex-direction: column;
+    gap: v.$space-xs;
+}
+
+.formulario label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.formulario input,
+.formulario select {
+    padding: v.$space-sm;
+    border-radius: v.$radius-md;
+    border: 1px solid v.$color-border;
+    font-size: 0.95rem;
+    transition: v.$transition-fast;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    outline: none;
+    border-color: v.$color-primary;
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.15);
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.formulario__checkbox {
+    font-size: 0.9rem;
+}
+
+/* =========================
+   BOTON
+========================= */
+
+.formulario__boton {
+    @include m.button-base;
+    @include m.button-variant(v.$color-primary, v.$color-text-inverse);
+    font-weight: 700;
+    margin-top: v.$space-sm;
+}
